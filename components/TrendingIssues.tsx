@@ -48,10 +48,10 @@ export default function TrendingIssues({ tickets }: { tickets: Ticket[] }) {
         <div>
           <div className="flex items-center gap-2 mb-1">
             <h3 className="font-display font-semibold text-lg text-[#1B1D2A] dark:text-white flex items-center gap-2">
-              <TrendingUp size={18} className="text-[#6D4AEB] dark:text-violet-400" />
+              <TrendingUp size={18} className="text-[#6D4AEB] dark:text-indigo-400" />
               Emerging Complaint Signals &amp; Heuristics
             </h3>
-            <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[rgba(109,74,235,0.06)] text-[#6D4AEB] border border-[rgba(109,74,235,0.15)] dark:bg-violet-500/10 dark:text-violet-300 dark:border-violet-500/20">
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[rgba(109,74,235,0.06)] text-[#6D4AEB] border border-[rgba(109,74,235,0.15)] dark:bg-indigo-500/10 dark:text-indigo-300 dark:border-indigo-500/20">
               NLP Cluster Analyzer
             </span>
           </div>
@@ -64,9 +64,9 @@ export default function TrendingIssues({ tickets }: { tickets: Ticket[] }) {
         {selectedTag && (
           <button
             onClick={() => setSelectedTag(null)}
-            className="self-start sm:self-auto text-xs px-2.5 py-1 rounded-full bg-[rgba(255,255,255,0.7)] hover:bg-white text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] border border-white/90 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex items-center gap-1 dark:bg-white/5 dark:hover:bg-white/10 dark:text-gray-400 dark:hover:text-white dark:border-white/10"
+            className="self-start sm:self-auto text-xs px-2.5 py-1 rounded-full bg-[rgba(255,255,255,0.7)] hover:bg-white text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] border border-white/90 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 dark:bg-white/5 dark:hover:bg-white/10 dark:text-gray-400 dark:hover:text-white dark:border-white/10"
           >
-            Clear filter: <span className="text-[#6D4AEB] dark:text-violet-400 font-mono">#{selectedTag}</span>
+            Clear filter: <span className="text-[#6D4AEB] dark:text-indigo-400 font-mono">#{selectedTag}</span>
           </button>
         )}
       </div>
@@ -87,9 +87,9 @@ export default function TrendingIssues({ tickets }: { tickets: Ticket[] }) {
                 <div
                   key={word}
                   onClick={() => setSelectedTag(isSelected ? null : word)}
-                  className={`group relative px-3.5 py-2 rounded-xl text-xs border transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none cursor-pointer flex items-center gap-2 ${
+                  className={`group relative px-3.5 py-2 rounded-xl text-xs border transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none cursor-pointer flex items-center gap-2 ${
                     isSelected
-                      ? 'bg-[rgba(109,74,235,0.1)] border-[rgba(109,74,235,0.35)] text-[#6D4AEB] shadow-[0_0_15px_rgba(109,74,235,0.15)] dark:bg-violet-500/20 dark:border-violet-500/50 dark:text-violet-200'
+                      ? 'bg-[rgba(109,74,235,0.1)] border-[rgba(109,74,235,0.35)] text-[#6D4AEB] shadow-[0_0_15px_rgba(109,74,235,0.15)] dark:bg-indigo-500/20 dark:border-indigo-500/50 dark:text-indigo-200'
                       : isHighSurge
                       ? 'bg-[rgba(201,122,0,0.06)] border-[rgba(201,122,0,0.2)] text-[#C97A00] hover:bg-[rgba(201,122,0,0.12)] dark:bg-amber-500/10 dark:border-amber-500/30 dark:text-amber-200 dark:hover:bg-amber-500/20'
                       : 'bg-[rgba(255,255,255,0.7)] border-white/90 text-slate-700 dark:text-slate-300 hover:bg-white dark:bg-white/5 dark:border-white/10 dark:text-gray-300 dark:hover:bg-white/10'
@@ -113,17 +113,17 @@ export default function TrendingIssues({ tickets }: { tickets: Ticket[] }) {
 
           {/* Detailed View if Tag Clicked */}
           {selectedTag && (
-            <div className="p-4 rounded-xl bg-[rgba(255,255,255,0.5)] dark:bg-black/40 border border-[rgba(109,74,235,0.2)] dark:border-violet-500/30 animate-fadeIn space-y-3">
+            <div className="p-4 rounded-xl bg-[rgba(255,255,255,0.5)] dark:bg-black/40 border border-[rgba(109,74,235,0.2)] dark:border-indigo-500/30 animate-fadeIn space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Filter size={14} className="text-[#6D4AEB] dark:text-violet-400" />
+                  <Filter size={14} className="text-[#6D4AEB] dark:text-indigo-400" />
                   <span className="text-xs font-semibold text-[#1B1D2A] dark:text-white">
-                    Tickets Correlated with <span className="text-[#6D4AEB] dark:text-violet-400">#{selectedTag}</span> ({matchingTickets.length})
+                    Tickets Correlated with <span className="text-[#6D4AEB] dark:text-indigo-400">#{selectedTag}</span> ({matchingTickets.length})
                   </span>
                 </div>
                 <button
                   onClick={() => handleCreateRule(selectedTag)}
-                  className="text-xs px-2.5 py-1 rounded-lg bg-[rgba(109,74,235,0.08)] hover:bg-[rgba(109,74,235,0.15)] border border-[rgba(109,74,235,0.25)] text-[#6D4AEB] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex items-center gap-1.5 dark:bg-violet-500/15 dark:hover:bg-violet-500/25 dark:border-violet-500/30 dark:text-violet-300"
+                  className="text-xs px-2.5 py-1 rounded-lg bg-[rgba(109,74,235,0.08)] hover:bg-[rgba(109,74,235,0.15)] border border-[rgba(109,74,235,0.25)] text-[#6D4AEB] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1.5 dark:bg-indigo-500/15 dark:hover:bg-indigo-500/25 dark:border-indigo-500/30 dark:text-indigo-300"
                 >
                   <ShieldAlert size={12} /> Auto-Route Inbound
                 </button>

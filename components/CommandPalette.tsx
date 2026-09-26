@@ -243,7 +243,7 @@ export default function CommandPalette({
       >
         {/* Search Input Bar */}
         <div className="flex items-center gap-3 px-4 py-3.5 border-b border-[rgba(109,74,235,0.08)] dark:border-white/10 bg-[rgba(255,255,255,0.5)] dark:bg-white/[0.02]">
-          <Search size={18} className="text-[#6D4AEB] dark:text-violet-400 shrink-0" />
+          <Search size={18} className="text-[#6D4AEB] dark:text-indigo-400 shrink-0" />
           <input
             ref={inputRef}
             type="text"
@@ -281,7 +281,7 @@ export default function CommandPalette({
                   onMouseEnter={() => setSelectedIndex(idx)}
                   className={`w-full flex items-center justify-between p-3 rounded-xl text-left transition-all ${
                     isSelected
-                      ? 'bg-[rgba(109,74,235,0.08)] dark:bg-gradient-to-r dark:from-violet-500/20 dark:via-violet-500/10 dark:to-transparent border border-[rgba(109,74,235,0.25)] dark:border-violet-500/40 text-[#1B1D2A] dark:text-white shadow-sm'
+                      ? 'bg-[rgba(109,74,235,0.08)] dark:bg-gradient-to-r dark:from-indigo-500/20 dark:via-indigo-500/10 dark:to-transparent border border-[rgba(109,74,235,0.25)] dark:border-indigo-500/40 text-[#1B1D2A] dark:text-white shadow-sm'
                       : 'hover:bg-[rgba(255,255,255,0.5)] dark:hover:bg-white/[0.04] text-[#6B6E85] dark:text-gray-300 border border-transparent'
                   }`}
                 >
@@ -289,7 +289,7 @@ export default function CommandPalette({
                     <div
                       className={`p-2 rounded-lg ${
                         isSelected
-                          ? 'bg-[rgba(109,74,235,0.12)] text-[#6D4AEB] dark:bg-violet-500/20 dark:text-violet-300'
+                          ? 'bg-[rgba(109,74,235,0.12)] text-[#6D4AEB] dark:bg-indigo-500/20 dark:text-indigo-300'
                           : 'bg-[rgba(255,255,255,0.7)] dark:bg-white/5 text-[#6B6E85] dark:text-gray-400'
                       }`}
                     >
@@ -301,7 +301,7 @@ export default function CommandPalette({
                           {item.label}
                         </span>
                         {item.badge && (
-                          <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-[rgba(109,74,235,0.06)] dark:bg-violet-500/10 border border-[rgba(109,74,235,0.2)] dark:border-violet-500/30 text-[#6D4AEB] dark:text-violet-300">
+                          <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-[rgba(109,74,235,0.06)] dark:bg-indigo-500/10 border border-[rgba(109,74,235,0.2)] dark:border-indigo-500/30 text-[#6D4AEB] dark:text-indigo-300">
                             {item.badge}
                           </span>
                         )}
@@ -317,7 +317,7 @@ export default function CommandPalette({
                       {item.category}
                     </span>
                     {isSelected && (
-                      <ArrowRight size={13} className="text-[#6D4AEB] dark:text-violet-400" />
+                      <ArrowRight size={13} className="text-[#6D4AEB] dark:text-indigo-400" />
                     )}
                   </div>
                 </button>
@@ -348,7 +348,7 @@ export default function CommandPalette({
               Close
             </span>
           </div>
-          <span className="text-[10px] font-mono text-[#6D4AEB] dark:text-violet-400">AURA Command</span>
+          <span className="text-[10px] font-mono text-[#6D4AEB] dark:text-indigo-400">AURA Command</span>
         </div>
       </div>
     </div>

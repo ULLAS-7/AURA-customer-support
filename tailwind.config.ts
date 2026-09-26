@@ -25,7 +25,7 @@ const config: Config = {
           500: '#0E9C74',
           600: '#059669',
         },
-        'violet-accent': {
+        'indigo-accent': {
           DEFAULT: '#6D4AEB',
           50: '#EDE9FE',
           100: '#DDD6FE',

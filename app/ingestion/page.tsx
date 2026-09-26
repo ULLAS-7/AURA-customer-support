@@ -298,14 +298,14 @@ export default function BulkIngestionStudio() {
         <div className="flex items-center gap-3">
           <button
             onClick={handleLoadSample}
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-[rgba(109,74,235,0.08)] dark:bg-violet-500/20 text-[#6D4AEB] dark:text-violet-300 border border-[rgba(109,74,235,0.25)] hover:bg-[rgba(109,74,235,0.15)] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-[rgba(109,74,235,0.08)] dark:bg-indigo-500/20 text-[#6D4AEB] dark:text-indigo-300 border border-[rgba(109,74,235,0.25)] hover:bg-[rgba(109,74,235,0.15)] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
           >
             <Sparkles size={15} />
             Load Sample Template
           </button>
           <button
             onClick={handleClear}
-            className="px-3.5 py-2 rounded-xl text-xs font-medium bg-[rgba(255,255,255,0.7)] dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] border border-white/90 dark:border-white/10 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+            className="px-3.5 py-2 rounded-xl text-xs font-medium bg-[rgba(255,255,255,0.7)] dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] border border-white/90 dark:border-white/10 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
           >
             Clear Buffer
           </button>
@@ -326,7 +326,7 @@ export default function BulkIngestionStudio() {
             <button
               key={tab.id}
               onClick={() => handleEntityChange(tab.id as EntityType)}
-              className={`flex-1 min-w-[160px] flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none ${
+              className={`flex-1 min-w-[160px] flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-bold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                 isActive
                   ? 'bg-white dark:bg-[#0F1424] text-[#1B1D2A] dark:text-white shadow-md shadow-[#6D4AEB]/10 border border-white/90 dark:border-white/10'
                   : 'text-slate-700 dark:text-slate-300 dark:text-gray-400 hover:text-[#1B1D2A]'
@@ -349,7 +349,7 @@ export default function BulkIngestionStudio() {
           <div className="flex items-center gap-1 p-1 rounded-lg bg-[rgba(255,255,255,0.5)] dark:bg-black/30 border border-white/90 dark:border-white/10">
             <button
               onClick={() => handleFormatChange('csv')}
-              className={`px-3 py-1 rounded text-xs font-bold transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none ${
+              className={`px-3 py-1 rounded text-xs font-bold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                 format === 'csv'
                   ? 'bg-[#6D4AEB] text-white shadow-sm'
                   : 'text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A]'
@@ -359,7 +359,7 @@ export default function BulkIngestionStudio() {
             </button>
             <button
               onClick={() => handleFormatChange('json')}
-              className={`px-3 py-1 rounded text-xs font-bold transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none ${
+              className={`px-3 py-1 rounded text-xs font-bold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                 format === 'json'
                   ? 'bg-[#6D4AEB] text-white shadow-sm'
                   : 'text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A]'
@@ -377,7 +377,7 @@ export default function BulkIngestionStudio() {
           </span>
           <span className="text-slate-700 dark:text-slate-300">
             Target Table:{' '}
-            <strong className="text-[#6D4AEB] dark:text-violet-300 capitalize">{activeEntity}</strong>
+            <strong className="text-[#6D4AEB] dark:text-indigo-300 capitalize">{activeEntity}</strong>
           </span>
         </div>
       </div>
@@ -409,7 +409,7 @@ export default function BulkIngestionStudio() {
           <button
             onClick={handleExecuteUpload}
             disabled={isProcessing || !buffer.trim()}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-bold text-xs tracking-wide bg-gradient-to-r from-[#6EE7C8] via-[#B69CFF] to-[#FFAFD1] text-[#1B1D2A] hover:opacity-95 shadow-md shadow-[#6D4AEB]/20 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none transform active:scale-95 disabled:opacity-50"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-bold text-xs tracking-wide bg-gradient-to-r from-[#6EE7C8] via-[#B69CFF] to-[#FFAFD1] text-[#1B1D2A] hover:opacity-95 shadow-md shadow-[#6D4AEB]/20 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none transform active:scale-95 disabled:opacity-50"
           >
             {isProcessing ? (
               <>

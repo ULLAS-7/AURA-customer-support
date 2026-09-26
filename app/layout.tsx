@@ -4,6 +4,7 @@ import './globals.css';
 import Nav from '@/components/Nav';
 import ToastStack from '@/components/ToastStack';
 import { AppStateProvider } from '@/lib/context/AppStateContext';
+import { AuthProvider } from '@/lib/context/AuthContext';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' });
@@ -46,16 +47,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-body min-h-screen transition-colors duration-300`}>
         {/* Prism Glass — Ambient Pastel Orb Washes */}
         <div className="orb orb-mint" />
-        <div className="orb orb-violet" />
+        <div className="orb orb-indigo" />
         <div className="orb orb-pink" />
 
-        <AppStateProvider>
-          <div className="relative z-[1]">
-            <Nav />
-            <main className="max-w-[1100px] mx-auto px-4 sm:px-6 py-7">{children}</main>
-          </div>
-          <ToastStack />
-        </AppStateProvider>
+        <AuthProvider>
+          <AppStateProvider>
+            <div className="relative z-[1]">
+              <Nav />
+              <main className="max-w-[1100px] mx-auto px-4 sm:px-6 py-7">{children}</main>
+            </div>
+            <ToastStack />
+          </AppStateProvider>
+        </AuthProvider>
       </body>
     </html>
   );

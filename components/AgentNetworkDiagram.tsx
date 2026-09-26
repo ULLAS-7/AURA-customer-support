@@ -7,7 +7,7 @@ const SPECIALISTS = [
   { name: 'Billing', role: 'Payment & Webhooks', icon: CreditCard, color: 'from-[rgba(201,122,0,0.08)] to-[rgba(234,179,8,0.08)] border-[rgba(201,122,0,0.3)] text-[#C97A00] dark:from-amber-500/20 dark:to-orange-500/20 dark:border-amber-500/40 dark:text-amber-300' },
   { name: 'Technical', role: 'Bugs & Auth API', icon: Wrench, color: 'from-fuchsia-500/[0.08] to-pink-500/[0.08] border-fuchsia-500/30 text-fuchsia-600 dark:from-fuchsia-500/20 dark:to-pink-500/20 dark:border-fuchsia-500/40 dark:text-fuchsia-300' },
   { name: 'Order', role: 'Fulfillment & Logistics', icon: Package, color: 'from-[rgba(14,156,116,0.08)] to-[rgba(20,184,166,0.08)] border-[rgba(14,156,116,0.3)] text-[#0E9C74] dark:from-emerald-500/20 dark:to-teal-500/20 dark:border-emerald-500/40 dark:text-emerald-300' },
-  { name: 'Account', role: 'Identity & Access', icon: UserCog, color: 'from-[rgba(109,74,235,0.08)] to-[rgba(99,102,241,0.08)] border-[rgba(109,74,235,0.3)] text-[#6D4AEB] dark:from-violet-500/20 dark:to-indigo-500/20 dark:border-violet-500/40 dark:text-violet-300' },
+  { name: 'Account', role: 'Identity & Access', icon: UserCog, color: 'from-[rgba(109,74,235,0.08)] to-[rgba(99,102,241,0.08)] border-[rgba(109,74,235,0.3)] text-[#6D4AEB] dark:from-indigo-500/20 dark:to-indigo-500/20 dark:border-indigo-500/40 dark:text-indigo-300' },
 ];
 
 function nodeStatus(name: string, visitedAgents: Set<string>, activeAgent: string | null) {
@@ -28,7 +28,7 @@ export default function AgentNetworkDiagram({ revealedSteps }: { revealedSteps: 
     <div className="relative py-4 px-2 select-none overflow-hidden">
       
       {/* Background Pipeline Glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(109,74,235,0.03)] via-[rgba(14,156,116,0.03)] to-[rgba(14,156,116,0.03)] dark:from-cyan-500/5 dark:via-violet-500/5 dark:to-emerald-500/5 rounded-2xl pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(109,74,235,0.03)] via-[rgba(14,156,116,0.03)] to-[rgba(14,156,116,0.03)] dark:from-cyan-500/5 dark:via-indigo-500/5 dark:to-emerald-500/5 rounded-2xl pointer-events-none" />
 
       <div className="relative z-10 flex flex-col items-center gap-3">
         
@@ -37,7 +37,7 @@ export default function AgentNetworkDiagram({ revealedSteps }: { revealedSteps: 
           <div
             className={`w-full flex items-center justify-between px-4 py-2.5 rounded-2xl border transition-all duration-300 ${
               routerStatus === 'active'
-                ? 'border-[#6D4AEB] bg-[rgba(109,74,235,0.08)] dark:border-cyan-400 dark:bg-violet-500/20 text-[#1B1D2A] dark:text-white shadow-[0_0_25px_rgba(109,74,235,0.2)] scale-[1.02]'
+                ? 'border-[#6D4AEB] bg-[rgba(109,74,235,0.08)] dark:border-cyan-400 dark:bg-indigo-500/20 text-[#1B1D2A] dark:text-white shadow-[0_0_25px_rgba(109,74,235,0.2)] scale-[1.02]'
                 : routerStatus === 'done'
                 ? 'border-[rgba(14,156,116,0.4)] dark:border-emerald-500/50 bg-[rgba(14,156,116,0.06)] dark:bg-emerald-500/10 text-[#0E9C74] dark:text-emerald-200'
                 : 'border-white/90 dark:border-white/10 bg-[rgba(255,255,255,0.5)] dark:bg-white/[0.03] text-slate-600 dark:text-slate-400 dark:text-gray-500'
@@ -54,7 +54,7 @@ export default function AgentNetworkDiagram({ revealedSteps }: { revealedSteps: 
                 <div className="text-[10px] text-slate-700 dark:text-slate-300 dark:text-gray-400">Classifies intent, sentiment, and urgency</div>
               </div>
             </div>
-            {routerStatus === 'active' && <span className="text-[10px] font-mono font-bold text-[#6D4AEB] dark:text-violet-300 animate-pulse">CLASSIFYING...</span>}
+            {routerStatus === 'active' && <span className="text-[10px] font-mono font-bold text-[#6D4AEB] dark:text-indigo-300 animate-pulse">CLASSIFYING...</span>}
             {routerStatus === 'done' && <CheckCircle size={14} className="text-[#0E9C74] dark:text-emerald-400" />}
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function AgentNetworkDiagram({ revealedSteps }: { revealedSteps: 
                 <div className="flex items-center justify-between mb-1.5">
                   <Icon size={16} className={status === 'active' ? 'animate-bounce' : status === 'done' ? 'text-[#0E9C74] dark:text-emerald-400' : 'text-slate-600 dark:text-slate-400 dark:text-gray-500'} />
                   {status === 'active' ? (
-                    <span className="w-2 h-2 rounded-full bg-[#6D4AEB] dark:bg-violet-400 animate-ping" />
+                    <span className="w-2 h-2 rounded-full bg-[#6D4AEB] dark:bg-indigo-400 animate-ping" />
                   ) : status === 'done' ? (
                     <CheckCircle size={12} className="text-[#0E9C74] dark:text-emerald-400" />
                   ) : (

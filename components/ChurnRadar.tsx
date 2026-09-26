@@ -11,7 +11,7 @@ const CUSTOMER_MAP = new Map(customersData.map((c) => [c.id, c]));
 
 const CATEGORY_COLORS: Record<string, string> = {
   Billing: '#06b6d4', // cyan-500
-  Order: '#3b82f6', // violet-500
+  Order: '#3b82f6', // indigo-500
   Technical: '#3b82f6', // blue-500
   Account: '#ec4899', // pink-500
 };
@@ -70,7 +70,7 @@ export default function ChurnRadar({ tickets }: { tickets: Ticket[] }) {
         <div>
           <div className="flex items-center justify-between mb-2">
             <h3 className="font-display font-semibold text-[#1B1D2A] dark:text-white flex items-center gap-2">
-              <TrendingDown size={18} className="text-[#6D4AEB] dark:text-violet-400" />
+              <TrendingDown size={18} className="text-[#6D4AEB] dark:text-indigo-400" />
               Incident Velocity by Category
             </h3>
             <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-[rgba(255,255,255,0.7)] dark:bg-white/5 border border-white/90 dark:border-white/10 text-slate-700 dark:text-slate-300 dark:text-gray-400">
@@ -96,7 +96,7 @@ export default function ChurnRadar({ tickets }: { tickets: Ticket[] }) {
                     return (
                       <div className="bg-white dark:bg-slate-900 border border-white/90 dark:border-white/10 rounded-xl p-3 shadow-2xl">
                         <p className="text-xs font-semibold text-[#1B1D2A] dark:text-white">{data.category} Tickets</p>
-                        <p className="text-sm font-bold text-[#6D4AEB] dark:text-violet-400 mt-1">{data.count} incidents</p>
+                        <p className="text-sm font-bold text-[#6D4AEB] dark:text-indigo-400 mt-1">{data.count} incidents</p>
                       </div>
                     );
                   }
@@ -161,7 +161,7 @@ export default function ChurnRadar({ tickets }: { tickets: Ticket[] }) {
             return (
               <div
                 key={r.customerId}
-                className="p-3 rounded-xl bg-[rgba(255,255,255,0.5)] dark:bg-black/30 border border-white/90 dark:border-white/5 hover:border-[rgba(109,74,235,0.2)] dark:hover:border-white/10 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                className="p-3 rounded-xl bg-[rgba(255,255,255,0.5)] dark:bg-black/30 border border-white/90 dark:border-white/5 hover:border-[rgba(109,74,235,0.2)] dark:hover:border-white/10 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex flex-col sm:flex-row sm:items-center justify-between gap-3"
               >
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
@@ -189,10 +189,10 @@ export default function ChurnRadar({ tickets }: { tickets: Ticket[] }) {
                   <button
                     onClick={() => handleTriggerRetention(r.name, r.customerId)}
                     disabled={isActionActive}
-                    className={`px-2.5 py-1 rounded-xl text-xs font-medium transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex items-center gap-1 border ${
+                    className={`px-2.5 py-1 rounded-xl text-xs font-medium transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 border ${
                       isActionActive
                         ? 'bg-[rgba(14,156,116,0.08)] border-[rgba(14,156,116,0.25)] text-[#0E9C74] dark:bg-emerald-500/20 dark:border-emerald-500/40 dark:text-emerald-300'
-                        : 'bg-[rgba(255,255,255,0.7)] hover:bg-[rgba(109,74,235,0.1)] border-white/90 hover:border-[rgba(109,74,235,0.3)] text-slate-700 dark:text-slate-300 hover:text-[#6D4AEB] dark:bg-white/5 dark:hover:bg-violet-500/20 dark:border-white/10 dark:hover:border-violet-500/40 dark:text-gray-300 dark:hover:text-violet-300'
+                        : 'bg-[rgba(255,255,255,0.7)] hover:bg-[rgba(109,74,235,0.1)] border-white/90 hover:border-[rgba(109,74,235,0.3)] text-slate-700 dark:text-slate-300 hover:text-[#6D4AEB] dark:bg-white/5 dark:hover:bg-indigo-500/20 dark:border-white/10 dark:hover:border-indigo-500/40 dark:text-gray-300 dark:hover:text-indigo-300'
                     }`}
                   >
                     {isActionActive ? (

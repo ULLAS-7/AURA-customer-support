@@ -150,14 +150,14 @@ export default function DashboardPage() {
         <div className="flex items-center gap-2">
           <button
             onClick={handleSeedDemoCapsule}
-            className="px-3.5 py-2 rounded-xl bg-[rgba(109,74,235,0.08)] border border-[rgba(109,74,235,0.2)] text-[#6D4AEB] hover:bg-[rgba(109,74,235,0.15)] dark:bg-[rgba(109,74,235,0.15)] dark:text-[#B69CFF] dark:hover:bg-[rgba(109,74,235,0.25)] text-xs font-medium transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex items-center gap-1.5 shadow-sm"
+            className="px-3.5 py-2 rounded-xl bg-[rgba(109,74,235,0.08)] border border-[rgba(109,74,235,0.2)] text-[#6D4AEB] hover:bg-[rgba(109,74,235,0.15)] dark:bg-[rgba(109,74,235,0.15)] dark:text-[#B69CFF] dark:hover:bg-[rgba(109,74,235,0.25)] text-xs font-medium transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1.5 shadow-sm"
           >
             <Sparkles size={14} /> Seed VIP Enterprise Case
           </button>
           <button
             onClick={resetDemo}
             title="Reset to Baseline Seed"
-            className="p-2 rounded-xl bg-[rgba(255,255,255,0.5)] border border-white/90 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] hover:bg-white dark:bg-[rgba(15,20,35,0.72)] dark:border-white/10 dark:text-[#8B8FA3] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none text-xs"
+            className="p-2 rounded-xl bg-[rgba(255,255,255,0.5)] border border-white/90 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] hover:bg-white dark:bg-[rgba(15,20,35,0.72)] dark:border-white/10 dark:text-[#8B8FA3] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-xs"
           >
             <RefreshCw size={14} />
           </button>
@@ -222,7 +222,7 @@ export default function DashboardPage() {
                 <button
                   key={filter}
                   onClick={() => setSelectedFilter(filter)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-medium transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none whitespace-nowrap border ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-medium transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none whitespace-nowrap border ${
                     active
                       ? 'bg-[rgba(109,74,235,0.1)] text-[#6D4AEB] border-[rgba(109,74,235,0.3)] dark:bg-[rgba(109,74,235,0.2)] dark:text-[#B69CFF] shadow-sm'
                       : 'bg-[rgba(255,255,255,0.7)] text-slate-700 dark:text-slate-300 border-white/90 hover:bg-white dark:bg-[rgba(15,20,35,0.72)] dark:text-[#8B8FA3] dark:border-white/10 dark:hover:bg-white/5'
@@ -247,7 +247,7 @@ export default function DashboardPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by customer, issue, or cause..."
-              className="w-full sm:w-64 pl-8 pr-3 py-1.5 rounded-xl bg-[rgba(255,255,255,0.5)] border border-white/90 text-[#1B1D2A] placeholder-[#9599AD] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+              className="w-full sm:w-64 pl-8 pr-3 py-1.5 rounded-xl bg-[rgba(255,255,255,0.5)] border border-white/90 text-[#1B1D2A] placeholder-[#9599AD] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
             />
           </div>
         </div>
@@ -268,7 +268,7 @@ export default function DashboardPage() {
             </div>
             <button
               onClick={handleSeedDemoCapsule}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#6EE7C8] via-[#B69CFF] to-[#FFAFD1] hover:opacity-95 text-[#1B1D2A] text-xs font-semibold shadow-sm transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#6EE7C8] via-[#B69CFF] to-[#FFAFD1] hover:opacity-95 text-[#1B1D2A] text-xs font-semibold shadow-sm transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
             >
               <Sparkles size={14} /> Pre-populate Enterprise Escalation Capsule
             </button>
@@ -306,7 +306,7 @@ export default function DashboardPage() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setNewArticleModalOpen(true)}
-              className="px-3 py-1.5 rounded-xl bg-[rgba(109,74,235,0.1)] text-[#6D4AEB] border border-[rgba(109,74,235,0.25)] dark:bg-[rgba(109,74,235,0.2)] dark:text-[#B69CFF] text-xs font-semibold flex items-center gap-1.5 hover:bg-[rgba(109,74,235,0.15)] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none shadow-sm whitespace-nowrap"
+              className="px-3 py-1.5 rounded-xl bg-[rgba(109,74,235,0.1)] text-[#6D4AEB] border border-[rgba(109,74,235,0.25)] dark:bg-[rgba(109,74,235,0.2)] dark:text-[#B69CFF] text-xs font-semibold flex items-center gap-1.5 hover:bg-[rgba(109,74,235,0.15)] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none shadow-sm whitespace-nowrap"
             >
               <Edit3 size={13} /> Author Article
             </button>
@@ -318,7 +318,7 @@ export default function DashboardPage() {
                 value={kbSearch}
                 onChange={(e) => setKbSearch(e.target.value)}
                 placeholder="Search knowledge base..."
-                className="w-full sm:w-60 pl-8 pr-3 py-1.5 rounded-xl bg-[rgba(255,255,255,0.5)] border border-white/90 text-[#1B1D2A] placeholder-[#9599AD] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                className="w-full sm:w-60 pl-8 pr-3 py-1.5 rounded-xl bg-[rgba(255,255,255,0.5)] border border-white/90 text-[#1B1D2A] placeholder-[#9599AD] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
               />
             </div>
           </div>
@@ -340,7 +340,7 @@ export default function DashboardPage() {
               <div
                 key={a.id}
                 onClick={() => setExpandedKb(isExpanded ? null : a.id)}
-                className="p-3.5 rounded-xl bg-[rgba(255,255,255,0.8)] border border-white/90 hover:border-[rgba(109,74,235,0.2)] shadow-sm dark:bg-[rgba(15,20,35,0.72)] dark:border-white/10 dark:hover:border-[rgba(109,74,235,0.3)] cursor-pointer transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex flex-col justify-between group"
+                className="p-3.5 rounded-xl bg-[rgba(255,255,255,0.8)] border border-white/90 hover:border-[rgba(109,74,235,0.2)] shadow-sm dark:bg-[rgba(15,20,35,0.72)] dark:border-white/10 dark:hover:border-[rgba(109,74,235,0.3)] cursor-pointer transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-1.5">
@@ -356,17 +356,17 @@ export default function DashboardPage() {
                             deleteKbArticle(a.id);
                           }
                         }}
-                        className="p-1 rounded text-slate-600 dark:text-slate-400 hover:text-[#E11D48] hover:bg-[rgba(225,29,72,0.1)] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                        className="p-1 rounded text-slate-600 dark:text-slate-400 hover:text-[#E11D48] hover:bg-[rgba(225,29,72,0.1)] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
                         title="Delete Article"
                       >
                         <Trash2 size={13} />
                       </button>
-                      <span className="text-slate-600 dark:text-slate-400 group-hover:text-[#6D4AEB] dark:group-hover:text-[#B69CFF] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none">
+                      <span className="text-slate-600 dark:text-slate-400 group-hover:text-[#6D4AEB] dark:group-hover:text-[#B69CFF] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none">
                         {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                       </span>
                     </div>
                   </div>
-                  <h4 className="text-sm font-bold text-[#1B1D2A] dark:text-white group-hover:text-[#6D4AEB] dark:group-hover:text-[#B69CFF] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none line-clamp-1">
+                  <h4 className="text-sm font-bold text-[#1B1D2A] dark:text-white group-hover:text-[#6D4AEB] dark:group-hover:text-[#B69CFF] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none line-clamp-1">
                     {a.title}
                   </h4>
                   <p
@@ -421,7 +421,7 @@ export default function DashboardPage() {
                   placeholder="e.g. AWS Multi-Region Gateway Timeout Policy"
                   value={newTitle}
                   onChange={(e) => setNewTitle(e.target.value)}
-                  className="w-full bg-[rgba(255,255,255,0.5)] border border-white/90 rounded-xl px-3 py-2 text-[#1B1D2A] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white dark:focus:border-[#6D4AEB] text-xs transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                  className="w-full bg-[rgba(255,255,255,0.5)] border border-white/90 rounded-xl px-3 py-2 text-[#1B1D2A] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white dark:focus:border-[#6D4AEB] text-xs transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
                 />
               </div>
 
@@ -431,7 +431,7 @@ export default function DashboardPage() {
                   <select
                     value={newCategory}
                     onChange={(e) => setNewCategory(e.target.value as any)}
-                    className="w-full bg-[rgba(255,255,255,0.5)] border border-white/90 rounded-xl px-3 py-2 text-[#1B1D2A] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white dark:focus:border-[#6D4AEB] text-xs transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                    className="w-full bg-[rgba(255,255,255,0.5)] border border-white/90 rounded-xl px-3 py-2 text-[#1B1D2A] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white dark:focus:border-[#6D4AEB] text-xs transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
                   >
                     <option value="Billing">Billing</option>
                     <option value="Technical">Technical</option>
@@ -447,7 +447,7 @@ export default function DashboardPage() {
                     placeholder="gateway, retry, refund"
                     value={newTags}
                     onChange={(e) => setNewTags(e.target.value)}
-                    className="w-full bg-[rgba(255,255,255,0.5)] border border-white/90 rounded-xl px-3 py-2 text-[#1B1D2A] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white dark:focus:border-[#6D4AEB] text-xs transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                    className="w-full bg-[rgba(255,255,255,0.5)] border border-white/90 rounded-xl px-3 py-2 text-[#1B1D2A] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white dark:focus:border-[#6D4AEB] text-xs transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
                   />
                 </div>
               </div>
@@ -460,7 +460,7 @@ export default function DashboardPage() {
                   placeholder="Document the exact technical diagnosis and step-by-step remediation protocol..."
                   value={newContent}
                   onChange={(e) => setNewContent(e.target.value)}
-                  className="w-full bg-[rgba(255,255,255,0.5)] border border-white/90 rounded-xl p-3 text-[#1B1D2A] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white dark:focus:border-[#6D4AEB] text-xs resize-none transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                  className="w-full bg-[rgba(255,255,255,0.5)] border border-white/90 rounded-xl p-3 text-[#1B1D2A] focus:outline-none focus:border-[#6D4AEB] dark:bg-[rgba(0,0,0,0.3)] dark:border-white/10 dark:text-white dark:focus:border-[#6D4AEB] text-xs resize-none transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
                 />
               </div>
             </div>
@@ -469,7 +469,7 @@ export default function DashboardPage() {
               <button
                 type="button"
                 onClick={() => setNewArticleModalOpen(false)}
-                className="px-3 py-1.5 rounded-xl bg-[rgba(255,255,255,0.5)] border border-white/90 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] hover:bg-white dark:bg-[rgba(15,20,35,0.72)] dark:border-white/10 dark:text-[#8B8FA3] dark:hover:text-white text-xs transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                className="px-3 py-1.5 rounded-xl bg-[rgba(255,255,255,0.5)] border border-white/90 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] hover:bg-white dark:bg-[rgba(15,20,35,0.72)] dark:border-white/10 dark:text-[#8B8FA3] dark:hover:text-white text-xs transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
               >
                 Cancel
               </button>

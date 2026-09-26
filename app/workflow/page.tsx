@@ -192,7 +192,7 @@ export default function WorkflowPage() {
               <button
                 key={speed}
                 onClick={() => setSimSpeed(speed)}
-                className={`px-2 py-0.5 rounded-lg font-mono font-medium transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none ${
+                className={`px-2 py-0.5 rounded-lg font-mono font-medium transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                   simSpeed === speed
                     ? 'bg-[rgba(109,74,235,0.12)] text-[#6D4AEB] border-[rgba(109,74,235,0.3)]'
                     : 'text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-white'
@@ -208,7 +208,7 @@ export default function WorkflowPage() {
             <button
               onClick={stepBackward}
               disabled={activeSimStep <= 0}
-              className="p-1.5 rounded-lg text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+              className="p-1.5 rounded-lg text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
               title="Previous Step"
             >
               <SkipBack size={15} />
@@ -217,14 +217,14 @@ export default function WorkflowPage() {
             {!isSimulating ? (
               <button
                 onClick={startSimulation}
-                className="px-3 py-1.5 rounded-lg bg-gradient-to-r from-[#6EE7C8] via-[#B69CFF] to-[#FFAFD1] hover:opacity-95 text-[#1B1D2A] font-semibold text-xs transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex items-center gap-1.5 shadow-[0_8px_30px_rgba(109,74,235,0.12)]"
+                className="px-3 py-1.5 rounded-lg bg-gradient-to-r from-[#6EE7C8] via-[#B69CFF] to-[#FFAFD1] hover:opacity-95 text-[#1B1D2A] font-semibold text-xs transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1.5 shadow-[0_8px_30px_rgba(109,74,235,0.12)]"
               >
                 <Play size={13} fill="currentColor" /> Simulate Flow
               </button>
             ) : (
               <button
                 onClick={togglePause}
-                className="px-3 py-1.5 rounded-lg bg-[rgba(109,74,235,0.15)] border border-[#6D4AEB] text-[#6D4AEB] font-semibold text-xs transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex items-center gap-1.5"
+                className="px-3 py-1.5 rounded-lg bg-[rgba(109,74,235,0.15)] border border-[#6D4AEB] text-[#6D4AEB] font-semibold text-xs transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1.5"
               >
                 {isPaused ? <Play size={13} fill="currentColor" /> : <Pause size={13} />}
                 {isPaused ? 'Resume' : `Step ${activeSimStep + 1}/${simSequence.length}`}
@@ -234,7 +234,7 @@ export default function WorkflowPage() {
             <button
               onClick={stepForward}
               disabled={activeSimStep >= simSequence.length - 1 && isSimulating}
-              className="p-1.5 rounded-lg text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+              className="p-1.5 rounded-lg text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-white disabled:opacity-30 disabled:pointer-events-none transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
               title="Next Step"
             >
               <SkipForward size={15} />
@@ -243,7 +243,7 @@ export default function WorkflowPage() {
             {isSimulating && (
               <button
                 onClick={resetSimulation}
-                className="p-1.5 rounded-lg text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#E11D48] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                className="p-1.5 rounded-lg text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#E11D48] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
                 title="Reset Simulation"
               >
                 <RotateCcw size={14} />
@@ -253,7 +253,7 @@ export default function WorkflowPage() {
 
           <button
             onClick={handleCopyManifest}
-            className="p-2 rounded-xl bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-white/90 dark:border-white/10 text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none text-xs flex items-center gap-1.5"
+            className="p-2 rounded-xl bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-white/90 dark:border-white/10 text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-xs flex items-center gap-1.5"
             title="Copy DAG JSON"
           >
             {copied ? <Check size={14} className="text-[#0E9C74]" /> : <Copy size={14} />}
@@ -331,7 +331,7 @@ export default function WorkflowPage() {
       <div className="lg:hidden flex items-center bg-[rgba(255,255,255,0.5)] dark:bg-[rgba(15,20,35,0.72)] border border-white/90 dark:border-white/10 rounded-xl p-1 text-xs gap-1">
         <button
           onClick={() => setMobileWorkflowView('graph')}
-          className={`flex-1 py-2 rounded-lg font-medium transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none text-center flex items-center justify-center gap-1.5 ${
+          className={`flex-1 py-2 rounded-lg font-medium transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-center flex items-center justify-center gap-1.5 ${
             mobileWorkflowView === 'graph'
               ? 'bg-[#1B1D2A] text-white shadow-sm'
               : 'text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-white'
@@ -342,7 +342,7 @@ export default function WorkflowPage() {
         </button>
         <button
           onClick={() => setMobileWorkflowView('inspector')}
-          className={`flex-1 py-2 rounded-lg font-medium transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none text-center flex items-center justify-center gap-1.5 ${
+          className={`flex-1 py-2 rounded-lg font-medium transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-center flex items-center justify-center gap-1.5 ${
             mobileWorkflowView === 'inspector'
               ? 'bg-[#1B1D2A] text-white shadow-sm'
               : 'text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-white'

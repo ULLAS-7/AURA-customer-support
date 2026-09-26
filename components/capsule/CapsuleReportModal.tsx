@@ -10,10 +10,10 @@ interface CapsuleReportModalProps {
 export default function CapsuleReportModal({ capsule, ltvDisplay, onClose }: CapsuleReportModalProps) {
   return (
     <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="glass-card p-4 sm:p-5 max-w-2xl w-full bg-white dark:bg-[#0F1424] border-[color-mix(in_srgb,var(--violet)_30%,transparent)] space-y-5 max-h-[90vh] overflow-y-auto">
-        <div className="flex items-center justify-between border-b border-[color-mix(in_srgb,var(--violet)_10%,transparent)] dark:border-white/10 pb-3">
+      <div className="glass-card p-4 sm:p-5 max-w-2xl w-full bg-white dark:bg-[#0F1424] border-[color-mix(in_srgb,var(--indigo)_30%,transparent)] space-y-5 max-h-[90vh] overflow-y-auto">
+        <div className="flex items-center justify-between border-b border-[color-mix(in_srgb,var(--indigo)_10%,transparent)] dark:border-white/10 pb-3">
           <div className="flex items-center gap-2">
-            <FileText size={18} className="text-[#6D4AEB] dark:text-violet-400" />
+            <FileText size={18} className="text-[#6D4AEB] dark:text-indigo-400" />
             <div>
               <h3 className="font-bold text-[#1B1D2A] dark:text-white text-base">Executive Incident Brief</h3>
               <p className="text-xs text-slate-600 dark:text-slate-400 dark:text-gray-400 font-mono">INC-{capsule.id.slice(0, 10).toUpperCase()}</p>
@@ -22,7 +22,7 @@ export default function CapsuleReportModal({ capsule, ltvDisplay, onClose }: Cap
           <div className="flex items-center gap-2">
             <button
               onClick={() => window.print()}
-              className="px-3 py-1.5 rounded-xl bg-[color-mix(in_srgb,var(--violet)_10%,transparent)] text-[#6D4AEB] border border-[color-mix(in_srgb,var(--violet)_30%,transparent)] dark:bg-violet-500/20 dark:text-violet-300 dark:border-violet-500/40 text-xs font-semibold flex items-center gap-1.5 hover:bg-[color-mix(in_srgb,var(--violet)_20%,transparent)] dark:hover:bg-violet-500/30 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+              className="px-3 py-1.5 rounded-xl bg-[color-mix(in_srgb,var(--indigo)_10%,transparent)] text-[#6D4AEB] border border-[color-mix(in_srgb,var(--indigo)_30%,transparent)] dark:bg-indigo-500/20 dark:text-indigo-300 dark:border-indigo-500/40 text-xs font-semibold flex items-center gap-1.5 hover:bg-[color-mix(in_srgb,var(--indigo)_20%,transparent)] dark:hover:bg-indigo-500/30 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
             >
               <Printer size={13} /> Print Brief
             </button>
@@ -84,15 +84,15 @@ export default function CapsuleReportModal({ capsule, ltvDisplay, onClose }: Cap
             </ul>
           </div>
 
-          <div className="bg-[color-mix(in_srgb,var(--violet)_6%,transparent)] dark:bg-violet-500/10 border border-[color-mix(in_srgb,var(--violet)_25%,transparent)] dark:border-violet-500/30 rounded-xl p-3">
-            <h4 className="font-bold text-[#6D4AEB] dark:text-violet-300 uppercase tracking-wider text-[11px] mb-0.5">
+          <div className="bg-[color-mix(in_srgb,var(--indigo)_6%,transparent)] dark:bg-indigo-500/10 border border-[color-mix(in_srgb,var(--indigo)_25%,transparent)] dark:border-indigo-500/30 rounded-xl p-3">
+            <h4 className="font-bold text-[#6D4AEB] dark:text-indigo-300 uppercase tracking-wider text-[11px] mb-0.5">
               Remediation Protocol
             </h4>
-            <p className="text-[#1B1D2A] dark:text-violet-100">{capsule.recommendedAction}</p>
+            <p className="text-[#1B1D2A] dark:text-indigo-100">{capsule.recommendedAction}</p>
           </div>
         </div>
 
-        <div className="pt-2 border-t border-[color-mix(in_srgb,var(--violet)_10%,transparent)] dark:border-white/10 flex justify-end">
+        <div className="pt-2 border-t border-[color-mix(in_srgb,var(--indigo)_10%,transparent)] dark:border-white/10 flex justify-end">
           <button
             onClick={onClose}
             className="px-4 py-2 rounded-xl bg-[rgba(255,255,255,0.7)] dark:bg-white/10 hover:bg-white dark:hover:bg-white/20 border border-white/90 dark:border-transparent text-[#1B1D2A] dark:text-white text-xs font-semibold"

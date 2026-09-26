@@ -65,13 +65,13 @@ export default function EvidencePanel({ revealedSteps }: { revealedSteps: Reason
     <div className="space-y-2">
       <div className="flex items-center justify-between text-xs text-slate-700 dark:text-slate-300 dark:text-gray-400 px-1">
         <span className="flex items-center gap-1.5 font-medium">
-          <Database size={13} className="text-[#6D4AEB] dark:text-violet-400" />
+          <Database size={13} className="text-[#6D4AEB] dark:text-indigo-400" />
           Cross-Source Evidence Corroboration ({activeMatches.length}/{SOURCES.length} sources confirmed)
         </span>
         {activeMatches.length > 0 && (
           <button
             onClick={() => setExpanded(!expanded)}
-            className="text-[11px] text-[#6D4AEB] dark:text-violet-400 hover:text-[#5B21B6] flex items-center gap-1 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+            className="text-[11px] text-[#6D4AEB] dark:text-indigo-400 hover:text-[#5B21B6] flex items-center gap-1 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
           >
             {expanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
             {expanded ? 'Collapse Dossier' : 'Inspect Evidence'}

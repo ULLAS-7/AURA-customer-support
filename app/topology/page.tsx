@@ -143,7 +143,7 @@ export default function TopologyMeshPage() {
               playClickSound();
               setIsModalOpen(true);
             }}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-xs tracking-wide bg-gradient-to-r from-[#6EE7C8] via-[#B69CFF] to-[#FFAFD1] text-[#1B1D2A] hover:opacity-95 shadow-md shadow-[#6D4AEB]/20 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none transform active:scale-95"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-xs tracking-wide bg-gradient-to-r from-[#6EE7C8] via-[#B69CFF] to-[#FFAFD1] text-[#1B1D2A] hover:opacity-95 shadow-md shadow-[#6D4AEB]/20 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none transform active:scale-95"
           >
             <Plus size={16} />
             Provision Corridor
@@ -247,7 +247,7 @@ export default function TopologyMeshPage() {
                 playClickSound();
                 setProtocolFilter(proto);
               }}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                 protocolFilter === proto
                   ? 'bg-[rgba(109,74,235,0.12)] text-[#6D4AEB] border border-[rgba(109,74,235,0.3)] shadow-sm'
                   : 'bg-[rgba(255,255,255,0.6)] dark:bg-white/5 text-slate-700 dark:text-slate-300 dark:text-gray-400 hover:text-[#1B1D2A] border border-white/80 dark:border-white/5'
@@ -322,12 +322,12 @@ export default function TopologyMeshPage() {
               return (
                 <div
                   key={c.id}
-                  className="glass-card p-5 space-y-4 hover:shadow-lg transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none group border border-white/90 dark:border-white/10"
+                  className="glass-card p-5 space-y-4 hover:shadow-lg transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none group border border-white/90 dark:border-white/10"
                 >
                   {/* Top Bar: Nodes & Protocol */}
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="px-2.5 py-1 rounded-md text-xs font-bold bg-[rgba(109,74,235,0.08)] dark:bg-violet-500/20 text-[#6D4AEB] dark:text-violet-300 border border-[rgba(109,74,235,0.2)]">
+                      <span className="px-2.5 py-1 rounded-md text-xs font-bold bg-[rgba(109,74,235,0.08)] dark:bg-indigo-500/20 text-[#6D4AEB] dark:text-indigo-300 border border-[rgba(109,74,235,0.2)]">
                         {c.sourceAgent}
                       </span>
                       <ArrowRight size={14} className="text-slate-600 dark:text-slate-400" />
@@ -379,7 +379,7 @@ export default function TopologyMeshPage() {
                     </div>
                     <div>
                       <span className="text-[10px] uppercase font-bold text-slate-600 dark:text-slate-400 block">Throughput</span>
-                      <span className="text-xs font-extrabold text-[#6D4AEB] dark:text-violet-300">
+                      <span className="text-xs font-extrabold text-[#6D4AEB] dark:text-indigo-300">
                         {c.throughputTokPerSec} tok/s
                       </span>
                     </div>
@@ -415,7 +415,7 @@ export default function TopologyMeshPage() {
                     <button
                       onClick={() => handleSever(c.id, `${c.sourceAgent} ➔ ${c.targetAgent}`)}
                       disabled={severingId === c.id}
-                      className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg text-[#E11D48] hover:bg-[rgba(225,29,72,0.08)] border border-[rgba(225,29,72,0.25)] hover:border-[#E11D48] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                      className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg text-[#E11D48] hover:bg-[rgba(225,29,72,0.08)] border border-[rgba(225,29,72,0.25)] hover:border-[#E11D48] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
                     >
                       <Trash2 size={13} />
                       Sever Link
@@ -573,7 +573,7 @@ export default function TopologyMeshPage() {
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 text-xs font-bold rounded-lg bg-gradient-to-r from-[#6EE7C8] via-[#B69CFF] to-[#FFAFD1] text-[#1B1D2A] hover:opacity-95 shadow-md shadow-[#6D4AEB]/20 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                  className="px-5 py-2 text-xs font-bold rounded-lg bg-gradient-to-r from-[#6EE7C8] via-[#B69CFF] to-[#FFAFD1] text-[#1B1D2A] hover:opacity-95 shadow-md shadow-[#6D4AEB]/20 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
                 >
                   Deploy Corridor
                 </button>

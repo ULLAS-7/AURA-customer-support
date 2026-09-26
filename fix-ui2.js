@@ -11,7 +11,7 @@ function processDir(dir) {
         } else if (fullPath.endsWith('.tsx') || fullPath.endsWith('.ts')) {
             let content = fs.readFileSync(fullPath, 'utf8');
             
-            content = content.replace(/transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none: /g, 'transition: ');
+            content = content.replace(/transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none: /g, 'transition: ');
             
             fs.writeFileSync(fullPath, content);
         }

@@ -8,13 +8,13 @@ let content = fs.readFileSync(file, 'utf8');
 // rose: 225,29,72
 // amber: 201,122,0
 // mint: 14,156,116
-// violet: 109,74,235
+// indigo: 109,74,235
 
 const replacements = [
   { rgb: '225,29,72', varName: '--rose' },
   { rgb: '201,122,0', varName: '--amber' },
   { rgb: '14,156,116', varName: '--mint' },
-  { rgb: '109,74,235', varName: '--violet' },
+  { rgb: '109,74,235', varName: '--indigo' },
 ];
 
 replacements.forEach(({ rgb, varName }) => {

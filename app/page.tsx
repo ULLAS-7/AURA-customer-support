@@ -54,7 +54,7 @@ const SCENARIOS = [
     label: '🔐 Login Loop',
     category: 'Auth / Tech',
     badge: 'Self-Service',
-    badgeColor: 'bg-[rgba(109,74,235,0.1)] text-[#6D4AEB] border-[rgba(109,74,235,0.2)] dark:bg-[rgba(109,74,235,0.15)] dark:border-[rgba(109,74,235,0.3)] dark:text-violet-300',
+    badgeColor: 'bg-[rgba(109,74,235,0.1)] text-[#6D4AEB] border-[rgba(109,74,235,0.2)] dark:bg-[rgba(109,74,235,0.15)] dark:border-[rgba(109,74,235,0.3)] dark:text-indigo-300',
     message: "I reset my password but I still can't log in to my account.",
     expected: 'Auto-resolved with session cache instructions',
   },
@@ -72,7 +72,7 @@ const SCENARIOS = [
     label: '⚡ API 429 Throttle',
     category: 'Developer API',
     badge: 'Auto-Burst',
-    badgeColor: 'bg-[rgba(109,74,235,0.1)] text-[#6D4AEB] border-[rgba(109,74,235,0.2)] dark:bg-[rgba(109,74,235,0.15)] dark:border-[rgba(109,74,235,0.3)] dark:text-violet-300',
+    badgeColor: 'bg-[rgba(109,74,235,0.1)] text-[#6D4AEB] border-[rgba(109,74,235,0.2)] dark:bg-[rgba(109,74,235,0.15)] dark:border-[rgba(109,74,235,0.3)] dark:text-indigo-300',
     message: 'Our production microservices are receiving 429 Too Many Requests on the events endpoint! We are on the Enterprise plan and our SLA guarantees 10,000 req/min.',
     expected: 'Auto-resolved with dynamic token tier upgrade',
   },
@@ -290,7 +290,7 @@ export default function Home() {
             <Zap size={12} />
             1.4s Parallel Consensus
           </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[rgba(109,74,235,0.06)] border border-[rgba(109,74,235,0.15)] text-[#6D4AEB] dark:bg-[rgba(109,74,235,0.15)] dark:border-[rgba(109,74,235,0.3)] dark:text-violet-300 text-xs font-semibold">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[rgba(109,74,235,0.06)] border border-[rgba(109,74,235,0.15)] text-[#6D4AEB] dark:bg-[rgba(109,74,235,0.15)] dark:border-[rgba(109,74,235,0.3)] dark:text-indigo-300 text-xs font-semibold">
             <ShieldCheck size={12} />
             Context Capsule Ready
           </span>
@@ -327,7 +327,7 @@ export default function Home() {
                 playClickSound();
                 setStudioOpen(!studioOpen);
               }}
-              className={`flex items-center gap-1.5 px-3 py-1 rounded-[10px] text-xs font-medium border transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none ${
+              className={`flex items-center gap-1.5 px-3 py-1 rounded-[10px] text-xs font-medium border transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                 studioOpen
                   ? 'bg-[rgba(109,74,235,0.1)] text-[#6D4AEB] border-[rgba(109,74,235,0.2)] shadow-sm'
                   : 'bg-[rgba(255,255,255,0.5)] dark:bg-white/5 hover:bg-[rgba(255,255,255,0.8)] dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 dark:text-gray-300 border-white/90 dark:border-white/10'
@@ -469,7 +469,7 @@ export default function Home() {
             </span>
             <button
               onClick={resetConversation}
-              className="flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none text-xs font-mono"
+              className="flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-xs font-mono"
               title="Clear conversation and start fresh"
             >
               <RotateCcw size={12} /> Clear thread
@@ -493,14 +493,14 @@ export default function Home() {
       )}
 
       {/* Intelligent Omnibar / Chat Input */}
-      <div className="glass-card p-3.5 space-y-3 focus-within:border-[rgba(109,74,235,0.4)] dark:focus-within:border-[rgba(109,74,235,0.5)] focus-within:shadow-[0_8px_30px_rgba(109,74,235,0.12)] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none">
+      <div className="glass-card p-3.5 space-y-3 focus-within:border-[rgba(109,74,235,0.4)] dark:focus-within:border-[rgba(109,74,235,0.5)] focus-within:shadow-[0_8px_30px_rgba(109,74,235,0.12)] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none">
         {attachedImage && (
           <div className="relative inline-block ml-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={attachedImage} alt="Attached screenshot" className="h-16 rounded-[10px] border border-[#6D4AEB]/40" />
             <button
               onClick={() => setAttachedImage(null)}
-              className="absolute -top-1.5 -right-1.5 bg-[#1B1D2A]/80 rounded-full p-1 text-white hover:bg-[#E11D48] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+              className="absolute -top-1.5 -right-1.5 bg-[#1B1D2A]/80 rounded-full p-1 text-white hover:bg-[#E11D48] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
             >
               <X size={10} />
             </button>
@@ -509,7 +509,7 @@ export default function Home() {
 
         <div className="flex gap-2 items-center">
           <label
-            className="p-2 rounded-[10px] hover:bg-[rgba(255,255,255,0.8)] dark:hover:bg-white/10 cursor-pointer text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] dark:text-gray-400 dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none shrink-0"
+            className="p-2 rounded-[10px] hover:bg-[rgba(255,255,255,0.8)] dark:hover:bg-white/10 cursor-pointer text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] dark:text-gray-400 dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none shrink-0"
             title="Attach screenshot (multimodal vision analysis)"
           >
             <Paperclip size={18} />
@@ -530,7 +530,7 @@ export default function Home() {
           <button
             onClick={send}
             disabled={loading || (!input.trim() && !attachedImage)}
-            className="px-5 py-2.5 rounded-[10px] bg-[#1B1D2A] hover:bg-[#2D2F3E] dark:bg-gradient-to-r dark:from-[#6EE7C8] dark:via-[#B69CFF] dark:to-[#FFAFD1] dark:text-[#1B1D2A] dark:hover:opacity-90 disabled:opacity-40 text-sm font-bold text-white flex items-center gap-2 shrink-0 shadow-md transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none cursor-pointer"
+            className="px-5 py-2.5 rounded-[10px] bg-[#1B1D2A] hover:bg-[#2D2F3E] dark:bg-gradient-to-r dark:from-[#6EE7C8] dark:via-[#B69CFF] dark:to-[#FFAFD1] dark:text-[#1B1D2A] dark:hover:opacity-90 disabled:opacity-40 text-sm font-bold text-white flex items-center gap-2 shrink-0 shadow-md transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none cursor-pointer"
           >
             {loading ? (
               <span className="flex items-center gap-2">
@@ -557,7 +557,7 @@ export default function Home() {
                 setInput(sug);
                 inputRef.current?.focus();
               }}
-              className="px-2.5 py-1 rounded-[10px] bg-[rgba(255,255,255,0.7)] dark:bg-white/5 hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 dark:text-gray-300 hover:text-[#1B1D2A] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none whitespace-nowrap border border-white/90 dark:border-white/5 font-medium text-[11px]"
+              className="px-2.5 py-1 rounded-[10px] bg-[rgba(255,255,255,0.7)] dark:bg-white/5 hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 dark:text-gray-300 hover:text-[#1B1D2A] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none whitespace-nowrap border border-white/90 dark:border-white/5 font-medium text-[11px]"
             >
               &ldquo;{sug}&rdquo;
             </button>
@@ -583,7 +583,7 @@ export default function Home() {
           <div className="md:hidden flex items-center bg-[rgba(255,255,255,0.5)] dark:bg-black/40 border border-white/90 dark:border-white/10 rounded-[10px] p-1 text-xs gap-1 overflow-x-auto">
             <button
               onClick={() => setMobileTab('steps')}
-              className={`flex-1 py-1.5 px-2 rounded-lg font-semibold transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none whitespace-nowrap text-center ${
+              className={`flex-1 py-1.5 px-2 rounded-lg font-semibold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none whitespace-nowrap text-center ${
                 mobileTab === 'steps'
                   ? 'bg-[#1B1D2A] text-white shadow-sm dark:bg-[rgba(109,74,235,0.2)] dark:text-[#B69CFF] dark:border dark:border-[rgba(109,74,235,0.4)]'
                   : 'text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] dark:text-gray-400 dark:hover:text-white'
@@ -593,7 +593,7 @@ export default function Home() {
             </button>
             <button
               onClick={() => setMobileTab('graph')}
-              className={`flex-1 py-1.5 px-2 rounded-lg font-semibold transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none whitespace-nowrap text-center ${
+              className={`flex-1 py-1.5 px-2 rounded-lg font-semibold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none whitespace-nowrap text-center ${
                 mobileTab === 'graph'
                   ? 'bg-[#1B1D2A] text-white shadow-sm dark:bg-[rgba(109,74,235,0.2)] dark:text-[#B69CFF] dark:border dark:border-[rgba(109,74,235,0.4)]'
                   : 'text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] dark:text-gray-400 dark:hover:text-white'
@@ -603,7 +603,7 @@ export default function Home() {
             </button>
             <button
               onClick={() => setMobileTab('evidence')}
-              className={`flex-1 py-1.5 px-2 rounded-lg font-semibold transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none whitespace-nowrap text-center ${
+              className={`flex-1 py-1.5 px-2 rounded-lg font-semibold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none whitespace-nowrap text-center ${
                 mobileTab === 'evidence'
                   ? 'bg-[#1B1D2A] text-white shadow-sm dark:bg-[rgba(109,74,235,0.2)] dark:text-[#B69CFF] dark:border dark:border-[rgba(109,74,235,0.4)]'
                   : 'text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] dark:text-gray-400 dark:hover:text-white'
@@ -614,7 +614,7 @@ export default function Home() {
             {showFinal && result && (
               <button
                 onClick={() => setMobileTab('resolution')}
-                className={`flex-1 py-1.5 px-2 rounded-lg font-semibold transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none whitespace-nowrap text-center ${
+                className={`flex-1 py-1.5 px-2 rounded-lg font-semibold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none whitespace-nowrap text-center ${
                   mobileTab === 'resolution'
                     ? 'bg-[#0E9C74] text-white shadow-sm dark:bg-[rgba(14,156,116,0.2)] dark:text-[#6EE7C8] dark:border dark:border-[rgba(14,156,116,0.4)]'
                     : 'text-[#0E9C74] hover:text-[#0E9C74]/80 dark:text-[#6EE7C8] dark:hover:text-white'
@@ -679,7 +679,7 @@ export default function Home() {
                 {result.decision !== 'auto-resolve' && (
                   <Link
                     href="/dashboard"
-                    className="w-full py-2.5 rounded-[10px] bg-[#C97A00] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md hover:bg-[#C97A00]/90 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none"
+                    className="w-full py-2.5 rounded-[10px] bg-[#C97A00] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md hover:bg-[#C97A00]/90 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none"
                   >
                     <span>Inspect Context Capsule on Dashboard</span>
                     <ArrowRight size={13} />
@@ -724,7 +724,7 @@ export default function Home() {
               <button
                 onClick={handleCopyDossier}
                 title="Copy Investigation JSON"
-                className="p-2 rounded-[10px] bg-[rgba(255,255,255,0.7)] dark:bg-white/5 hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-white/10 border border-white/90 dark:border-white/10 text-slate-700 dark:text-slate-300 dark:text-gray-300 hover:text-[#1B1D2A] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none text-xs flex items-center gap-1 shadow-sm"
+                className="p-2 rounded-[10px] bg-[rgba(255,255,255,0.7)] dark:bg-white/5 hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-white/10 border border-white/90 dark:border-white/10 text-slate-700 dark:text-slate-300 dark:text-gray-300 hover:text-[#1B1D2A] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-xs flex items-center gap-1 shadow-sm"
               >
                 {copiedDossier ? <Check size={14} className="text-[#0E9C74] dark:text-emerald-400" /> : <Copy size={14} />}
               </button>
@@ -732,7 +732,7 @@ export default function Home() {
               <button
                 onClick={handleDownloadDossier}
                 title="Download Investigation Audit Dossier"
-                className="p-2 rounded-[10px] bg-[rgba(255,255,255,0.7)] dark:bg-white/5 hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-white/10 border border-white/90 dark:border-white/10 text-slate-700 dark:text-slate-300 dark:text-gray-300 hover:text-[#1B1D2A] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none text-xs flex items-center gap-1 shadow-sm"
+                className="p-2 rounded-[10px] bg-[rgba(255,255,255,0.7)] dark:bg-white/5 hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-white/10 border border-white/90 dark:border-white/10 text-slate-700 dark:text-slate-300 dark:text-gray-300 hover:text-[#1B1D2A] dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-xs flex items-center gap-1 shadow-sm"
               >
                 <Download size={14} />
               </button>
@@ -740,7 +740,7 @@ export default function Home() {
               {result.decision !== 'auto-resolve' && (
                 <Link
                   href="/dashboard"
-                  className="px-4 py-2 rounded-[10px] bg-[#C97A00] text-white font-bold text-xs flex items-center gap-1.5 shadow-md shadow-[#C97A00]/20 hover:bg-[#C97A00]/90 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none shrink-0"
+                  className="px-4 py-2 rounded-[10px] bg-[#C97A00] text-white font-bold text-xs flex items-center gap-1.5 shadow-md shadow-[#C97A00]/20 hover:bg-[#C97A00]/90 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none shrink-0"
                 >
                   <span>View Capsule on Dashboard</span>
                   <ArrowRight size={13} />

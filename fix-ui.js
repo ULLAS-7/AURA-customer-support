@@ -17,7 +17,7 @@ function processDir(dir) {
             content = content.replace(/bg-\[rgba\\(255,255,255,0\.5\\)\]/g, 'bg-white/50 backdrop-blur-md');
             content = content.replace(/bg-\[rgba\\(255,255,255,0\.7\\)\]/g, 'bg-white/70 backdrop-blur-md');
             
-            content = content.replace(/transition(?![a-zA-Z-])/g, 'transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none');
+            content = content.replace(/transition(?![a-zA-Z-])/g, 'transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none');
             
             content = content.replace(/p-6/g, 'p-4 sm:p-5');
             content = content.replace(/gap-6/g, 'gap-4 sm:gap-5');

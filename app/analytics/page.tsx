@@ -45,7 +45,7 @@ export default function AnalyticsPage() {
               <button
                 key={range}
                 onClick={() => setTimeRange(range)}
-                className={`px-3 py-1 rounded-lg text-xs font-medium transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none ${
+                className={`px-3 py-1 rounded-lg text-xs font-medium transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                   timeRange === range
                     ? 'bg-[rgba(109,74,235,0.12)] text-[#6D4AEB] shadow-sm border border-[rgba(109,74,235,0.3)]'
                     : 'text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] dark:text-gray-400 dark:hover:text-white'
@@ -66,7 +66,7 @@ export default function AnalyticsPage() {
               a.download = `aura-analytics-export-${Date.now()}.json`;
               a.click();
             }}
-            className="p-2 rounded-xl bg-[rgba(255,255,255,0.5)] border border-white/90 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] dark:bg-white/5 dark:hover:bg-white/10 dark:border-white/10 dark:text-gray-300 dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none text-xs flex items-center gap-1.5"
+            className="p-2 rounded-xl bg-[rgba(255,255,255,0.5)] border border-white/90 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] dark:bg-white/5 dark:hover:bg-white/10 dark:border-white/10 dark:text-gray-300 dark:hover:text-white transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-xs flex items-center gap-1.5"
             title="Export Telemetry JSON"
           >
             <Download size={14} />

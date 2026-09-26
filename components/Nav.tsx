@@ -24,8 +24,10 @@ import {
   UploadCloud,
 } from 'lucide-react';
 import { useAppState } from '@/lib/context/AppStateContext';
+import { useAuth } from '@/lib/context/AuthContext';
 import { isSoundEnabled, setSoundEnabled, playClickSound } from '@/lib/audio/soundEffects';
 import CommandPalette from './CommandPalette';
+import { User as UserIcon, LogOut } from 'lucide-react';
 
 const links = [
   { href: '/', label: 'Customer Chat', icon: MessageSquare },
@@ -39,6 +41,7 @@ const links = [
 export default function Nav() {
   const pathname = usePathname();
   const { resetDemo, tickets, capsules, theme, toggleTheme } = useAppState();
+  const { user, logout } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [soundOn, setSoundOn] = useState(true);
@@ -77,8 +80,8 @@ export default function Nav() {
         {/* Brand & Telemetry */}
         <div className="flex items-center gap-3">
           <Link href="/" onClick={() => playClickSound()} className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-[9px] bg-[linear-gradient(135deg,#6EE7C8,#B69CFF_55%,#FFAFD1)] shadow-md shadow-[#6D4AEB]/15 group-hover:shadow-[#6D4AEB]/30 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex items-center justify-center">
-              <Sparkles className="text-white group-hover:scale-110 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none" size={17} />
+            <div className="w-9 h-9 rounded-[9px] bg-[linear-gradient(135deg,#6EE7C8,#B69CFF_55%,#FFAFD1)] shadow-md shadow-[#6D4AEB]/15 group-hover:shadow-[#6D4AEB]/30 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center justify-center">
+              <Sparkles className="text-white group-hover:scale-110 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none" size={17} />
             </div>
             <div>
               <div className="flex items-center gap-2">
@@ -111,7 +114,7 @@ export default function Nav() {
                   key={l.href}
                   href={l.href}
                   onClick={() => playClickSound()}
-                  className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none ${
+                  className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                     isActive
                       ? 'bg-[rgba(255,255,255,0.85)] dark:bg-[rgba(255,255,255,0.1)] text-[#1B1D2A] dark:text-[#E8EAF0] shadow-[0_2px_10px_rgba(109,74,235,0.08)] dark:shadow-none'
                       : 'text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] hover:bg-[rgba(255,255,255,0.4)] dark:hover:bg-[rgba(255,255,255,0.05)]'
@@ -135,10 +138,10 @@ export default function Nav() {
               playClickSound();
               setPaletteOpen(true);
             }}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-white/90 dark:border-white/8 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] hover:border-[rgba(109,74,235,0.3)] dark:hover:border-[#6D4AEB]/50 text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)] dark:shadow-none group"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-white/90 dark:border-white/8 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] hover:border-[rgba(109,74,235,0.3)] dark:hover:border-[#6D4AEB]/50 text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)] dark:shadow-none group"
             title="Open Omnibar Command Palette (Ctrl+K)"
           >
-            <Search size={13} className="text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] group-hover:text-[#6D4AEB] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none" />
+            <Search size={13} className="text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] group-hover:text-[#6D4AEB] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none" />
             <span className="hidden lg:inline text-[#1B1D2A] dark:text-[#E8EAF0] font-medium">Quick Actions</span>
             <kbd className="flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-[rgba(255,255,255,0.5)] dark:bg-white/5 border border-white/90 dark:border-white/8 text-[10px] font-mono text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3]">
               <Command size={10} className="hidden lg:inline" /> K
@@ -152,7 +155,7 @@ export default function Nav() {
               toggleTheme();
             }}
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-            className="p-2 rounded-xl border border-white/90 dark:border-white/8 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-[rgba(255,255,255,0.1)] text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex items-center gap-1 text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)] dark:shadow-none"
+            className="p-2 rounded-xl border border-white/90 dark:border-white/8 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-[rgba(255,255,255,0.1)] text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)] dark:shadow-none"
           >
             {theme === 'light' ? <Moon size={15} className="text-[#6D4AEB]" /> : <Sun size={15} className="text-[#C97A00]" />}
           </button>
@@ -161,7 +164,7 @@ export default function Nav() {
           <button
             onClick={toggleSound}
             title={soundOn ? 'Mute Audio' : 'Enable Audio'}
-            className={`p-2 rounded-xl border transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex items-center gap-1 text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)] dark:shadow-none ${
+            className={`p-2 rounded-xl border transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)] dark:shadow-none ${
               soundOn
                 ? 'bg-[#0E9C74]/10 border-[#0E9C74]/30 text-[#0E9C74]'
                 : 'bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] border-white/90 dark:border-white/8 text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0]'
@@ -179,11 +182,50 @@ export default function Nav() {
               }
             }}
             title="Reset demo state"
-            className="p-2 rounded-xl text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] bg-[rgba(255,255,255,0.5)] dark:bg-[rgba(15,20,35,0.5)] hover:bg-[rgba(255,255,255,0.8)] dark:hover:bg-[rgba(255,255,255,0.1)] border border-transparent hover:border-white/90 dark:hover:border-white/8 transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none flex items-center gap-1 text-xs"
+            className="p-2 rounded-xl text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] bg-[rgba(255,255,255,0.5)] dark:bg-[rgba(15,20,35,0.5)] hover:bg-[rgba(255,255,255,0.8)] dark:hover:bg-[rgba(255,255,255,0.1)] border border-transparent hover:border-white/90 dark:hover:border-white/8 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 text-xs"
           >
             <RotateCcw size={15} />
             <span className="hidden xl:inline text-[11px] font-medium">Reset</span>
           </button>
+
+          {/* User Profile */}
+          {user ? (
+            <div className="flex items-center gap-2 ml-2 pl-2 border-l border-slate-300 dark:border-slate-700">
+              <Link
+                href="/profile"
+                className="flex items-center gap-1.5 p-2 rounded-xl border border-white/90 dark:border-white/8 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-[rgba(255,255,255,0.1)] text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] transition text-xs"
+              >
+                <UserIcon size={15} />
+                <span className="hidden xl:inline text-[11px] font-medium truncate max-w-[80px]">
+                  {user.name}
+                </span>
+                {user.role === 'admin' && (
+                  <span className="ml-1 text-[9px] bg-[#6D4AEB] text-white px-1.5 py-0.5 rounded-full">
+                    Admin
+                  </span>
+                )}
+              </Link>
+              <button
+                onClick={() => {
+                  playClickSound();
+                  logout();
+                }}
+                title="Logout"
+                className="p-2 rounded-xl text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#E11D48] dark:hover:text-[#E11D48] transition"
+              >
+                <LogOut size={15} />
+              </button>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2 ml-2 pl-2 border-l border-slate-300 dark:border-slate-700">
+              <Link
+                href="/login"
+                className="px-3 py-1.5 rounded-xl bg-[#6D4AEB] text-white text-xs font-semibold hover:bg-[#5b3dc4] transition"
+              >
+                Login
+              </Link>
+            </div>
+          )}
         </div>
 
         {/* Mobile Hamburger & Actions */}
@@ -240,7 +282,7 @@ export default function Nav() {
                   playClickSound();
                   setMobileMenuOpen(false);
                 }}
-                className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:outline-none ${
+                className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                   isActive
                     ? 'bg-[rgba(255,255,255,0.85)] dark:bg-[rgba(255,255,255,0.1)] text-[#1B1D2A] dark:text-[#E8EAF0] border border-white/90 dark:border-white/8'
                     : 'text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] hover:bg-[rgba(255,255,255,0.5)] dark:hover:bg-white/5'
