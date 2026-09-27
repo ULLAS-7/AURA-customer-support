@@ -12,7 +12,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space
 export const metadata: Metadata = {
   title: 'AURA — Autonomous Support Intelligence',
   description:
-    'A multi-agent AI customer support system that investigates root causes, resolves issues automatically, and hands complex cases to humans with complete context.',
+    'A hackathon demo that visualises conceptual AI ticket routing. Uses a TF-IDF keyword engine to match support queries against static knowledge base records and route them to the appropriate agent category.',
   icons: {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },

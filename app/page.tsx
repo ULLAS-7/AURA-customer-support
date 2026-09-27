@@ -268,7 +268,7 @@ export default function Home() {
       <section className="text-center space-y-4 pt-4 pb-2 max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgba(14,156,116,0.08)] border border-[rgba(14,156,116,0.2)] text-[#0E9C74] dark:bg-[rgba(14,156,116,0.15)] dark:border-[rgba(14,156,116,0.3)] dark:text-emerald-300 text-xs font-bold">
           <Sparkles size={13} />
-          <span>AUTONOMOUS MULTI-AGENT RESOLUTION ENGINE</span>
+          <span>CONCEPTUAL AI SUPPORT WORKFLOW</span>
         </div>
 
         <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight text-[#1B1D2A] dark:text-white">
@@ -284,11 +284,11 @@ export default function Home() {
         <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[rgba(14,156,116,0.06)] border border-[rgba(14,156,116,0.15)] text-[#0E9C74] dark:bg-[rgba(14,156,116,0.15)] dark:border-[rgba(14,156,116,0.3)] dark:text-emerald-300 text-xs font-semibold">
             <span className="w-2 h-2 rounded-full bg-[#0E9C74] animate-pulse" />
-            4 Autonomous Nodes Online
+            4 Conceptual Agents
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[rgba(14,156,116,0.06)] border border-[rgba(14,156,116,0.15)] text-[#0E9C74] dark:bg-[rgba(14,156,116,0.15)] dark:border-[rgba(14,156,116,0.3)] dark:text-emerald-300 text-xs font-semibold">
             <Zap size={12} />
-            1.4s Parallel Consensus
+            Static JSON Node Graph
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[rgba(109,74,235,0.06)] border border-[rgba(109,74,235,0.15)] text-[#6D4AEB] dark:bg-[rgba(109,74,235,0.15)] dark:border-[rgba(109,74,235,0.3)] dark:text-indigo-300 text-xs font-semibold">
             <ShieldCheck size={12} />
@@ -305,7 +305,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center justify-center p-2 text-center">
           <span className="text-2xl font-bold font-mono text-[#0E9C74]">{stats.resolved}</span>
-          <span className="text-xs text-slate-700 dark:text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Auto-Resolved</span>
+          <span className="text-xs text-slate-700 dark:text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Demo Routed</span>
         </div>
         <div className="flex flex-col items-center justify-center p-2 text-center">
           <span className="text-2xl font-bold font-mono text-[#C97A00]">{stats.escalated}</span>
@@ -313,7 +313,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center justify-center p-2 text-center">
           <span className="text-2xl font-bold font-mono text-[#6D4AEB]">{stats.rate}%</span>
-          <span className="text-xs text-slate-700 dark:text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Auto-Resolve Rate</span>
+          <span className="text-xs text-slate-700 dark:text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Demo Route Rate</span>
         </div>
       </div>
 
@@ -667,7 +667,7 @@ export default function Home() {
                           : 'bg-[rgba(201,122,0,0.1)] text-[#C97A00] border-[#C97A00]'
                       }`}
                     >
-                      {result.decision === 'auto-resolve' ? '✔ AUTO-RESOLVED' : '🤝 ESCALATED'}
+                      {result.decision === 'auto-resolve' ? '✔ ROUTED: RESOLVED' : '🤝 ROUTED: ESCALATED'}
                     </span>
                     <h3 className="text-sm font-bold text-[#1B1D2A] dark:text-white mt-1">{result.rootCause}</h3>
                   </div>
@@ -712,7 +712,7 @@ export default function Home() {
                         : 'bg-[rgba(201,122,0,0.1)] text-[#C97A00] border-[#C97A00]'
                     }`}
                   >
-                    {result.decision === 'auto-resolve' ? '✔ AUTO-RESOLVED' : '🤝 HUMAN ESCALATION REQUIRED'}
+                    {result.decision === 'auto-resolve' ? '✔ ROUTED: RESOLVED' : '🤝 ROUTED: HUMAN REVIEW'}
                   </span>
                   <span className="text-xs text-slate-700 dark:text-slate-300 dark:text-gray-400 font-mono font-medium">Category: {result.category}</span>
                 </div>
