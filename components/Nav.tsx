@@ -75,7 +75,7 @@ export default function Nav() {
   };
 
   return (
-    <header className="border-b border-white/90 dark:border-white/8 sticky top-0 z-50 bg-[rgba(255,255,255,0.68)] dark:bg-[rgba(15,20,35,0.85)] backdrop-blur-[22px] transition-all">
+    <header className="border-b border-white/90  sticky top-0 z-50 bg-[rgba(255,255,255,0.68)]  backdrop-blur-[22px] transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
         {/* Brand & Telemetry */}
         <div className="flex items-center gap-3">
@@ -85,11 +85,11 @@ export default function Nav() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-display text-xl font-extrabold tracking-tight text-[#1B1D2A] dark:text-white">
+                <span className="font-display text-xl font-extrabold tracking-tight text-[#1B1D2A] ">
                   AURA
                 </span>
               </div>
-              <p className="text-[10px] text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] tracking-wider hidden sm:block font-medium">
+              <p className="text-[10px] text-slate-700   tracking-wider hidden sm:block font-medium">
                 Autonomous Support Intelligence
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function Nav() {
 
           {/* Engine Status Pill */}
           <div className="hidden lg:flex items-center">
-            <span className="live-pill flex items-center gap-1.5 text-xs text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] px-3 py-1 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] rounded-full border border-white/90 dark:border-white/8">
+            <span className="live-pill flex items-center gap-1.5 text-xs text-slate-700   px-3 py-1 bg-[rgba(255,255,255,0.7)]  rounded-full border border-white/90 ">
               <span className="live-dot w-1.5 h-1.5 rounded-full bg-[#0E9C74]" /> Live system · {ping}ms ping
             </span>
           </div>
@@ -105,7 +105,7 @@ export default function Nav() {
 
         {/* Center/Right Nav Links */}
         <div className="hidden md:flex items-center gap-2">
-          <nav className="flex items-center gap-1 bg-[rgba(255,255,255,0.5)] dark:bg-[rgba(15,20,35,0.5)] border border-white/90 dark:border-white/8 p-1 rounded-xl">
+          <nav className="flex items-center gap-1 bg-[rgba(255,255,255,0.5)]  border border-white/90  p-1 rounded-xl">
             {links.map((l) => {
               const Icon = l.icon;
               const isActive = pathname === l.href;
@@ -116,11 +116,11 @@ export default function Nav() {
                   onClick={() => playClickSound()}
                   className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                     isActive
-                      ? 'bg-[rgba(255,255,255,0.85)] dark:bg-[rgba(255,255,255,0.1)] text-[#1B1D2A] dark:text-[#E8EAF0] shadow-[0_2px_10px_rgba(109,74,235,0.08)] dark:shadow-none'
-                      : 'text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] hover:bg-[rgba(255,255,255,0.4)] dark:hover:bg-[rgba(255,255,255,0.05)]'
+                      ? 'bg-[rgba(255,255,255,0.85)]  text-[#1B1D2A]  shadow-[0_2px_10px_rgba(109,74,235,0.08)] '
+                      : 'text-slate-700   hover:text-[#1B1D2A]  hover:bg-[rgba(255,255,255,0.4)] '
                   }`}
                 >
-                  <Icon size={14} className={isActive ? 'text-[#6D4AEB]' : 'text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3]'} />
+                  <Icon size={14} className={isActive ? 'text-[#6D4AEB]' : 'text-slate-700  '} />
                   {l.label}
                   {l.href === '/dashboard' && capsules.length > 0 && (
                     <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-[#C97A00] text-white border border-[#C97A00] font-mono font-bold">
@@ -138,12 +138,12 @@ export default function Nav() {
               playClickSound();
               setPaletteOpen(true);
             }}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-white/90 dark:border-white/8 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] hover:border-[rgba(109,74,235,0.3)] dark:hover:border-[#6D4AEB]/50 text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)] dark:shadow-none group"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-white/90  bg-[rgba(255,255,255,0.7)]  hover:border-[rgba(109,74,235,0.3)]  text-slate-700   hover:text-[#1B1D2A]  transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)]  group"
             title="Open Omnibar Command Palette (Ctrl+K)"
           >
-            <Search size={13} className="text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] group-hover:text-[#6D4AEB] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none" />
-            <span className="hidden lg:inline text-[#1B1D2A] dark:text-[#E8EAF0] font-medium">Quick Actions</span>
-            <kbd className="flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-[rgba(255,255,255,0.5)] dark:bg-white/5 border border-white/90 dark:border-white/8 text-[10px] font-mono text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3]">
+            <Search size={13} className="text-slate-700   group-hover:text-[#6D4AEB] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none" />
+            <span className="hidden lg:inline text-[#1B1D2A]  font-medium">Quick Actions</span>
+            <kbd className="flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-[rgba(255,255,255,0.5)]  border border-white/90  text-[10px] font-mono text-slate-700  ">
               <Command size={10} className="hidden lg:inline" /> K
             </kbd>
           </button>
@@ -155,7 +155,7 @@ export default function Nav() {
               toggleTheme();
             }}
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
-            className="p-2 rounded-xl border border-white/90 dark:border-white/8 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-[rgba(255,255,255,0.1)] text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)] dark:shadow-none"
+            className="p-2 rounded-xl border border-white/90  bg-[rgba(255,255,255,0.7)]  hover:bg-[rgba(255,255,255,0.9)]  text-slate-700   hover:text-[#1B1D2A]  transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)] "
           >
             {theme === 'light' ? <Moon size={15} className="text-[#6D4AEB]" /> : <Sun size={15} className="text-[#C97A00]" />}
           </button>
@@ -164,10 +164,10 @@ export default function Nav() {
           <button
             onClick={toggleSound}
             title={soundOn ? 'Mute Audio' : 'Enable Audio'}
-            className={`p-2 rounded-xl border transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)] dark:shadow-none ${
+            className={`p-2 rounded-xl border transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 text-xs shadow-[0_8px_30px_rgba(109,74,235,0.07)]  ${
               soundOn
                 ? 'bg-[#0E9C74]/10 border-[#0E9C74]/30 text-[#0E9C74]'
-                : 'bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] border-white/90 dark:border-white/8 text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0]'
+                : 'bg-[rgba(255,255,255,0.7)]  border-white/90  text-slate-700   hover:text-[#1B1D2A] '
             }`}
           >
             {soundOn ? <Volume2 size={15} /> : <VolumeX size={15} />}
@@ -182,7 +182,7 @@ export default function Nav() {
               }
             }}
             title="Reset demo state"
-            className="p-2 rounded-xl text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] bg-[rgba(255,255,255,0.5)] dark:bg-[rgba(15,20,35,0.5)] hover:bg-[rgba(255,255,255,0.8)] dark:hover:bg-[rgba(255,255,255,0.1)] border border-transparent hover:border-white/90 dark:hover:border-white/8 transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 text-xs"
+            className="p-2 rounded-xl text-slate-700   hover:text-[#1B1D2A]  bg-[rgba(255,255,255,0.5)]  hover:bg-[rgba(255,255,255,0.8)]  border border-transparent hover:border-white/90  transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none flex items-center gap-1 text-xs"
           >
             <RotateCcw size={15} />
             <span className="hidden xl:inline text-[11px] font-medium">Reset</span>
@@ -190,10 +190,10 @@ export default function Nav() {
 
           {/* User Profile */}
           {user ? (
-            <div className="flex items-center gap-2 ml-2 pl-2 border-l border-slate-300 dark:border-slate-700">
+            <div className="flex items-center gap-2 ml-2 pl-2 border-l border-slate-300 ">
               <Link
                 href="/profile"
-                className="flex items-center gap-1.5 p-2 rounded-xl border border-white/90 dark:border-white/8 bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] hover:bg-[rgba(255,255,255,0.9)] dark:hover:bg-[rgba(255,255,255,0.1)] text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] transition text-xs"
+                className="flex items-center gap-1.5 p-2 rounded-xl border border-white/90  bg-[rgba(255,255,255,0.7)]  hover:bg-[rgba(255,255,255,0.9)]  text-slate-700   hover:text-[#1B1D2A]  transition text-xs"
               >
                 <UserIcon size={15} />
                 <span className="hidden xl:inline text-[11px] font-medium truncate max-w-[80px]">
@@ -211,13 +211,13 @@ export default function Nav() {
                   logout();
                 }}
                 title="Logout"
-                className="p-2 rounded-xl text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#E11D48] dark:hover:text-[#E11D48] transition"
+                className="p-2 rounded-xl text-slate-700   hover:text-[#E11D48]  transition"
               >
                 <LogOut size={15} />
               </button>
             </div>
           ) : (
-            <div className="flex items-center gap-2 ml-2 pl-2 border-l border-slate-300 dark:border-slate-700">
+            <div className="flex items-center gap-2 ml-2 pl-2 border-l border-slate-300 ">
               <Link
                 href="/login"
                 className="px-3 py-1.5 rounded-xl bg-[#6D4AEB] text-white text-xs font-semibold hover:bg-[#5b3dc4] transition"
@@ -235,7 +235,7 @@ export default function Nav() {
               playClickSound();
               setPaletteOpen(true);
             }}
-            className="p-2 rounded-lg bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] border border-white/90 dark:border-white/8 text-[#6D4AEB] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0]"
+            className="p-2 rounded-lg bg-[rgba(255,255,255,0.7)]  border border-white/90  text-[#6D4AEB] hover:text-[#1B1D2A] "
             title="Open Command Palette"
           >
             <Search size={16} />
@@ -246,7 +246,7 @@ export default function Nav() {
               playClickSound();
               toggleTheme();
             }}
-            className="p-2 rounded-lg bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] border border-white/90 dark:border-white/8 text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0]"
+            className="p-2 rounded-lg bg-[rgba(255,255,255,0.7)]  border border-white/90  text-slate-700   hover:text-[#1B1D2A] "
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
           >
             {theme === 'light' ? <Moon size={16} className="text-[#6D4AEB]" /> : <Sun size={16} className="text-[#C97A00]" />}
@@ -254,14 +254,14 @@ export default function Nav() {
 
           <button
             onClick={toggleSound}
-            className="p-2 rounded-lg bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] border border-white/90 dark:border-white/8 text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0]"
+            className="p-2 rounded-lg bg-[rgba(255,255,255,0.7)]  border border-white/90  text-slate-700   hover:text-[#1B1D2A] "
           >
             {soundOn ? <Volume2 size={16} className="text-[#0E9C74]" /> : <VolumeX size={16} />}
           </button>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg bg-[rgba(255,255,255,0.7)] dark:bg-[rgba(15,20,35,0.72)] border border-white/90 dark:border-white/8 text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0]"
+            className="p-2 rounded-lg bg-[rgba(255,255,255,0.7)]  border border-white/90  text-slate-700   hover:text-[#1B1D2A] "
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -270,7 +270,7 @@ export default function Nav() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden px-4 pt-2 pb-4 border-t border-white/90 dark:border-white/8 bg-[rgba(255,255,255,0.95)] dark:bg-[rgba(15,20,35,0.95)] backdrop-blur-[22px] space-y-1 shadow-lg">
+        <div className="md:hidden px-4 pt-2 pb-4 border-t border-white/90  bg-[rgba(255,255,255,0.95)]  backdrop-blur-[22px] space-y-1 shadow-lg">
           {links.map((l) => {
             const Icon = l.icon;
             const isActive = pathname === l.href;
@@ -284,11 +284,11 @@ export default function Nav() {
                 }}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                   isActive
-                    ? 'bg-[rgba(255,255,255,0.85)] dark:bg-[rgba(255,255,255,0.1)] text-[#1B1D2A] dark:text-[#E8EAF0] border border-white/90 dark:border-white/8'
-                    : 'text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] hover:text-[#1B1D2A] dark:hover:text-[#E8EAF0] hover:bg-[rgba(255,255,255,0.5)] dark:hover:bg-white/5'
+                    ? 'bg-[rgba(255,255,255,0.85)]  text-[#1B1D2A]  border border-white/90 '
+                    : 'text-slate-700   hover:text-[#1B1D2A]  hover:bg-[rgba(255,255,255,0.5)] '
                 }`}
               >
-                <Icon size={16} className={isActive ? 'text-[#6D4AEB]' : 'text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3]'} />
+                <Icon size={16} className={isActive ? 'text-[#6D4AEB]' : 'text-slate-700  '} />
                 {l.label}
               </Link>
             );
@@ -299,7 +299,7 @@ export default function Nav() {
               resetDemo();
               setMobileMenuOpen(false);
             }}
-            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-[#E11D48] dark:text-[#E11D48] hover:bg-[#E11D48]/10"
+            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-[#E11D48]  hover:bg-[#E11D48]/10"
           >
             <RotateCcw size={16} /> Reset Demo State
           </button>

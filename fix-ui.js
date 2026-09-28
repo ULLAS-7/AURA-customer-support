@@ -11,8 +11,8 @@ function processDir(dir) {
         } else if (fullPath.endsWith('.tsx') || fullPath.endsWith('.ts')) {
             let content = fs.readFileSync(fullPath, 'utf8');
             
-            content = content.replace(/text-\[#6B6E85\]/g, 'text-slate-700 dark:text-slate-300');
-            content = content.replace(/text-\[#9599AD\]/g, 'text-slate-600 dark:text-slate-400');
+            content = content.replace(/text-\[#6B6E85\]/g, 'text-slate-700 ');
+            content = content.replace(/text-\[#9599AD\]/g, 'text-slate-600 ');
             
             content = content.replace(/bg-\[rgba\\(255,255,255,0\.5\\)\]/g, 'bg-white/50 backdrop-blur-md');
             content = content.replace(/bg-\[rgba\\(255,255,255,0\.7\\)\]/g, 'bg-white/70 backdrop-blur-md');

@@ -34,26 +34,7 @@
    PRISM GLASS — DARK THEME
    Deep navy with frosted dark glass
    ═══════════════════════════════════════════════ */
-html.dark {
-  --bg-canvas: #0B0F1A;
-  --text-primary: #E8EAF0;
-  --text-secondary: #8B8FA3;
-  --text-footnote: #5A5E72;
-
-  --glass-bg: rgba(15, 20, 35, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  --glass-blur: blur(22px);
-
-  --mint: #34D399;
-  --indigo: #A78BFA;
-  --amber: #FBBF24;
-  --rose: #FB7185;
-  --emerald: #10B981;
-
-  --brand-gradient: linear-gradient(135deg, #6EE7C8, #B69CFF 55%, #FFAFD1);
-  --text-gradient: linear-gradient(135deg, #6EE7C8, #B69CFF 60%, #FFAFD1);
-}
+html
 
 /* ═══════════════════════════════════════════════
    BASE STYLES

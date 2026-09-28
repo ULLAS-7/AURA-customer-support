@@ -233,17 +233,17 @@ export default function CommandPalette({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/60 dark:bg-black/75 backdrop-blur-md animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-white/60  backdrop-blur-md animate-fadeIn"
       onClick={onClose}
     >
       <div
-        className="w-full max-w-2xl rounded-2xl bg-white/95 dark:bg-[#0B0F1A]/95 backdrop-blur-[22px] border border-[rgba(109,74,235,0.2)] dark:border-[rgba(109,74,235,0.35)] shadow-[0_8px_40px_rgba(109,74,235,0.15)] dark:shadow-[0_0_50px_rgba(109,74,235,0.25)] overflow-hidden flex flex-col max-h-[80vh]"
+        className="w-full max-w-2xl rounded-2xl bg-white/95  backdrop-blur-[22px] border border-[rgba(109,74,235,0.2)]  shadow-[0_8px_40px_rgba(109,74,235,0.15)]  overflow-hidden flex flex-col max-h-[80vh]"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={handleKeyDown}
       >
         {/* Search Input Bar */}
-        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-[rgba(109,74,235,0.08)] dark:border-white/10 bg-[rgba(255,255,255,0.5)] dark:bg-white/[0.02]">
-          <Search size={18} className="text-[#6D4AEB] dark:text-indigo-400 shrink-0" />
+        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-[rgba(109,74,235,0.08)]  bg-[rgba(255,255,255,0.5)] ">
+          <Search size={18} className="text-[#6D4AEB]  shrink-0" />
           <input
             ref={inputRef}
             type="text"
@@ -253,9 +253,9 @@ export default function CommandPalette({
               setSelectedIndex(0);
             }}
             placeholder="Type a command, scenario, or navigate... (e.g. 'Stripe', 'Analytics')"
-            className="w-full bg-transparent text-[#1B1D2A] dark:text-white placeholder-[#9599AD] dark:placeholder-gray-500 text-sm focus:outline-none"
+            className="w-full bg-transparent text-[#1B1D2A]  placeholder-[#9599AD]  text-sm focus:outline-none"
           />
-          <kbd className="hidden sm:flex items-center gap-1 text-[10px] font-mono text-[#6B6E85] dark:text-gray-400 bg-[rgba(255,255,255,0.7)] dark:bg-white/5 border border-white/90 dark:border-white/10 px-2 py-0.5 rounded">
+          <kbd className="hidden sm:flex items-center gap-1 text-[10px] font-mono text-[#6B6E85]  bg-[rgba(255,255,255,0.7)]  border border-white/90  px-2 py-0.5 rounded">
             ESC
           </kbd>
         </div>
@@ -263,8 +263,8 @@ export default function CommandPalette({
         {/* Command Items List */}
         <div className="overflow-y-auto p-2 space-y-1 divide-y divide-white/5">
           {filtered.length === 0 ? (
-            <div className="py-12 text-center text-[#6B6E85] dark:text-gray-400 text-sm">
-              <Command size={28} className="mx-auto text-[#9599AD] dark:text-gray-600 mb-2" />
+            <div className="py-12 text-center text-[#6B6E85]  text-sm">
+              <Command size={28} className="mx-auto text-[#9599AD]  mb-2" />
               No commands matching "{query}"
             </div>
           ) : (
@@ -281,43 +281,43 @@ export default function CommandPalette({
                   onMouseEnter={() => setSelectedIndex(idx)}
                   className={`w-full flex items-center justify-between p-3 rounded-xl text-left transition-all ${
                     isSelected
-                      ? 'bg-[rgba(109,74,235,0.08)] dark:bg-gradient-to-r dark:from-indigo-500/20 dark:via-indigo-500/10 dark:to-transparent border border-[rgba(109,74,235,0.25)] dark:border-indigo-500/40 text-[#1B1D2A] dark:text-white shadow-sm'
-                      : 'hover:bg-[rgba(255,255,255,0.5)] dark:hover:bg-white/[0.04] text-[#6B6E85] dark:text-gray-300 border border-transparent'
+                      ? 'bg-[rgba(109,74,235,0.08)]     border border-[rgba(109,74,235,0.25)]  text-[#1B1D2A]  shadow-sm'
+                      : 'hover:bg-[rgba(255,255,255,0.5)]  text-[#6B6E85]  border border-transparent'
                   }`}
                 >
                   <div className="flex items-center gap-3 min-w-0">
                     <div
                       className={`p-2 rounded-lg ${
                         isSelected
-                          ? 'bg-[rgba(109,74,235,0.12)] text-[#6D4AEB] dark:bg-indigo-500/20 dark:text-indigo-300'
-                          : 'bg-[rgba(255,255,255,0.7)] dark:bg-white/5 text-[#6B6E85] dark:text-gray-400'
+                          ? 'bg-[rgba(109,74,235,0.12)] text-[#6D4AEB]  '
+                          : 'bg-[rgba(255,255,255,0.7)]  text-[#6B6E85] '
                       }`}
                     >
                       <Icon size={16} />
                     </div>
                     <div className="truncate">
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-semibold text-[#1B1D2A] dark:text-white truncate">
+                        <span className="text-xs font-semibold text-[#1B1D2A]  truncate">
                           {item.label}
                         </span>
                         {item.badge && (
-                          <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-[rgba(109,74,235,0.06)] dark:bg-indigo-500/10 border border-[rgba(109,74,235,0.2)] dark:border-indigo-500/30 text-[#6D4AEB] dark:text-indigo-300">
+                          <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-[rgba(109,74,235,0.06)]  border border-[rgba(109,74,235,0.2)]  text-[#6D4AEB] ">
                             {item.badge}
                           </span>
                         )}
                       </div>
-                      <p className="text-[11px] text-[#9599AD] dark:text-gray-400 truncate mt-0.5">
+                      <p className="text-[11px] text-[#9599AD]  truncate mt-0.5">
                         {item.sublabel}
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-2 shrink-0 ml-3">
-                    <span className="text-[10px] font-mono text-[#9599AD] dark:text-gray-500 uppercase tracking-wider hidden sm:inline">
+                    <span className="text-[10px] font-mono text-[#9599AD]  uppercase tracking-wider hidden sm:inline">
                       {item.category}
                     </span>
                     {isSelected && (
-                      <ArrowRight size={13} className="text-[#6D4AEB] dark:text-indigo-400" />
+                      <ArrowRight size={13} className="text-[#6D4AEB] " />
                     )}
                   </div>
                 </button>
@@ -327,28 +327,28 @@ export default function CommandPalette({
         </div>
 
         {/* Footer shortcuts */}
-        <div className="px-4 py-2.5 bg-[rgba(255,255,255,0.5)] dark:bg-black/40 border-t border-[rgba(109,74,235,0.08)] dark:border-white/10 flex items-center justify-between text-[11px] text-gray-500">
+        <div className="px-4 py-2.5 bg-[rgba(255,255,255,0.5)]  border-t border-[rgba(109,74,235,0.08)]  flex items-center justify-between text-[11px] text-gray-500">
           <div className="flex items-center gap-3">
             <span className="flex items-center gap-1">
-              <kbd className="px-1.5 py-0.5 bg-[rgba(255,255,255,0.7)] dark:bg-white/5 border border-white/90 dark:border-white/10 rounded font-mono text-[9px] text-[#6B6E85] dark:text-gray-400">
+              <kbd className="px-1.5 py-0.5 bg-[rgba(255,255,255,0.7)]  border border-white/90  rounded font-mono text-[9px] text-[#6B6E85] ">
                 ↑↓
               </kbd>
               Navigate
             </span>
             <span className="flex items-center gap-1">
-              <kbd className="px-1.5 py-0.5 bg-[rgba(255,255,255,0.7)] dark:bg-white/5 border border-white/90 dark:border-white/10 rounded font-mono text-[9px] text-[#6B6E85] dark:text-gray-400">
+              <kbd className="px-1.5 py-0.5 bg-[rgba(255,255,255,0.7)]  border border-white/90  rounded font-mono text-[9px] text-[#6B6E85] ">
                 ↵
               </kbd>
               Select
             </span>
             <span className="flex items-center gap-1">
-              <kbd className="px-1.5 py-0.5 bg-[rgba(255,255,255,0.7)] dark:bg-white/5 border border-white/90 dark:border-white/10 rounded font-mono text-[9px] text-[#6B6E85] dark:text-gray-400">
+              <kbd className="px-1.5 py-0.5 bg-[rgba(255,255,255,0.7)]  border border-white/90  rounded font-mono text-[9px] text-[#6B6E85] ">
                 Esc
               </kbd>
               Close
             </span>
           </div>
-          <span className="text-[10px] font-mono text-[#6D4AEB] dark:text-indigo-400">AURA Command</span>
+          <span className="text-[10px] font-mono text-[#6D4AEB] ">AURA Command</span>
         </div>
       </div>
     </div>

@@ -120,17 +120,17 @@ export default function TopologyMeshPage() {
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[rgba(14,156,116,0.08)] dark:bg-[rgba(14,156,116,0.15)] text-[#0E9C74] dark:text-emerald-300 border border-[rgba(14,156,116,0.2)]">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[rgba(14,156,116,0.08)]  text-[#0E9C74]  border border-[rgba(14,156,116,0.2)]">
               <span className="w-2 h-2 rounded-full bg-[#0E9C74] animate-pulse" />
               Relational Topology Mesh V5.0
             </span>
-            <span className="text-xs text-slate-600 dark:text-slate-400">Multi-Agent Corridors</span>
+            <span className="text-xs text-slate-600 ">Multi-Agent Corridors</span>
           </div>
-          <h1 className="font-display text-3xl font-extrabold tracking-tight text-[#1B1D2A] dark:text-white flex items-center gap-3">
+          <h1 className="font-display text-3xl font-extrabold tracking-tight text-[#1B1D2A]  flex items-center gap-3">
             <Network className="text-[#6D4AEB]" size={32} />
             Agent Interconnect & Topology Mesh
           </h1>
-          <p className="text-sm text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] mt-1 max-w-2xl">
+          <p className="text-sm text-slate-700   mt-1 max-w-2xl">
             Live cognitive routing corridors connecting specialist AI agents, priority tier channels,
             and real-time RPC/Neural stream telemetry with instant link severing.
           </p>
@@ -155,7 +155,7 @@ export default function TopologyMeshPage() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="glass-card p-5 space-y-2 border-l-4 border-l-[#6D4AEB]">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] uppercase tracking-wider">
+            <span className="text-xs font-semibold text-slate-700   uppercase tracking-wider">
               Active Corridors
             </span>
             <div className="w-8 h-8 rounded-lg bg-[rgba(109,74,235,0.08)] flex items-center justify-center text-[#6D4AEB]">
@@ -163,10 +163,10 @@ export default function TopologyMeshPage() {
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-3xl font-extrabold text-[#1B1D2A] dark:text-white">
+            <span className="font-display text-3xl font-extrabold text-[#1B1D2A] ">
               {active}
             </span>
-            <span className="text-xs font-medium text-slate-700 dark:text-slate-300">/ {total} allocated</span>
+            <span className="text-xs font-medium text-slate-700 ">/ {total} allocated</span>
           </div>
           <p className="text-[11px] text-[#0E9C74] flex items-center gap-1 font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-[#0E9C74]" /> Zero-partition state
@@ -175,7 +175,7 @@ export default function TopologyMeshPage() {
 
         <div className="glass-card p-5 space-y-2 border-l-4 border-l-[#0E9C74]">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] uppercase tracking-wider">
+            <span className="text-xs font-semibold text-slate-700   uppercase tracking-wider">
               Mean Latency
             </span>
             <div className="w-8 h-8 rounded-lg bg-[rgba(14,156,116,0.08)] flex items-center justify-center text-[#0E9C74]">
@@ -183,10 +183,10 @@ export default function TopologyMeshPage() {
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-3xl font-extrabold text-[#1B1D2A] dark:text-white">
+            <span className="font-display text-3xl font-extrabold text-[#1B1D2A] ">
               {avgLatency}
             </span>
-            <span className="text-xs font-medium text-slate-700 dark:text-slate-300">ms RTT</span>
+            <span className="text-xs font-medium text-slate-700 ">ms RTT</span>
           </div>
           <p className="text-[11px] text-[#0E9C74] font-medium">
             Target SLA: &lt; 50ms (Optimal)
@@ -195,7 +195,7 @@ export default function TopologyMeshPage() {
 
         <div className="glass-card p-5 space-y-2 border-l-4 border-l-[#059669]">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] uppercase tracking-wider">
+            <span className="text-xs font-semibold text-slate-700   uppercase tracking-wider">
               SLA Adherence
             </span>
             <div className="w-8 h-8 rounded-lg bg-[rgba(5,150,105,0.08)] flex items-center justify-center text-[#059669]">
@@ -203,19 +203,19 @@ export default function TopologyMeshPage() {
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-3xl font-extrabold text-[#1B1D2A] dark:text-white">
+            <span className="font-display text-3xl font-extrabold text-[#1B1D2A] ">
               {slaAdherence}%
             </span>
             <span className="text-xs font-medium text-[#0E9C74]">high-fidelity</span>
           </div>
-          <p className="text-[11px] text-slate-700 dark:text-slate-300 font-medium">
+          <p className="text-[11px] text-slate-700  font-medium">
             Strict enterprise contract compliance
           </p>
         </div>
 
         <div className="glass-card p-5 space-y-2 border-l-4 border-l-[#C97A00]">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] uppercase tracking-wider">
+            <span className="text-xs font-semibold text-slate-700   uppercase tracking-wider">
               Throughput
             </span>
             <div className="w-8 h-8 rounded-lg bg-[rgba(201,122,0,0.08)] flex items-center justify-center text-[#C97A00]">
@@ -223,10 +223,10 @@ export default function TopologyMeshPage() {
             </div>
           </div>
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-3xl font-extrabold text-[#1B1D2A] dark:text-white">
+            <span className="font-display text-3xl font-extrabold text-[#1B1D2A] ">
               {totalThroughput.toLocaleString()}
             </span>
-            <span className="text-xs font-medium text-slate-700 dark:text-slate-300">tok/s</span>
+            <span className="text-xs font-medium text-slate-700 ">tok/s</span>
           </div>
           <p className="text-[11px] text-[#6D4AEB] font-medium">
             Active neural stream load
@@ -237,7 +237,7 @@ export default function TopologyMeshPage() {
       {/* Filter and Search Bar */}
       <div className="glass-card p-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
-          <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mr-1 flex items-center gap-1">
+          <span className="text-xs font-semibold text-slate-700  uppercase tracking-wider mr-1 flex items-center gap-1">
             <Filter size={13} /> Protocol:
           </span>
           {['All', 'gRPC', 'Neural Stream', 'HTTP/REST', 'WebSocket'].map((proto) => (
@@ -250,7 +250,7 @@ export default function TopologyMeshPage() {
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none ${
                 protocolFilter === proto
                   ? 'bg-[rgba(109,74,235,0.12)] text-[#6D4AEB] border border-[rgba(109,74,235,0.3)] shadow-sm'
-                  : 'bg-[rgba(255,255,255,0.6)] dark:bg-white/5 text-slate-700 dark:text-slate-300 dark:text-gray-400 hover:text-[#1B1D2A] border border-white/80 dark:border-white/5'
+                  : 'bg-[rgba(255,255,255,0.6)]  text-slate-700   hover:text-[#1B1D2A] border border-white/80 '
               }`}
             >
               {proto}
@@ -263,7 +263,7 @@ export default function TopologyMeshPage() {
           <select
             value={tierFilter}
             onChange={(e) => setTierFilter(e.target.value)}
-            className="px-3 py-1.5 rounded-lg text-xs font-medium bg-[rgba(255,255,255,0.8)] dark:bg-[#0F1424] border border-white/90 dark:border-white/10 text-[#1B1D2A] dark:text-white outline-none focus:border-[#6D4AEB]"
+            className="px-3 py-1.5 rounded-lg text-xs font-medium bg-[rgba(255,255,255,0.8)]  border border-white/90  text-[#1B1D2A]  outline-none focus:border-[#6D4AEB]"
           >
             <option value="All">All Tiers</option>
             <option value="Enterprise">Enterprise Tier</option>
@@ -272,13 +272,13 @@ export default function TopologyMeshPage() {
           </select>
 
           <div className="relative flex-1 md:w-64">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-600 dark:text-slate-400" size={15} />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-600 " size={15} />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search agent corridors..."
-              className="w-full pl-9 pr-3 py-1.5 text-xs rounded-lg bg-[rgba(255,255,255,0.8)] dark:bg-[#0F1424] border border-white/90 dark:border-white/10 text-[#1B1D2A] dark:text-white placeholder-[#9599AD] outline-none focus:border-[#6D4AEB]"
+              className="w-full pl-9 pr-3 py-1.5 text-xs rounded-lg bg-[rgba(255,255,255,0.8)]  border border-white/90  text-[#1B1D2A]  placeholder-[#9599AD] outline-none focus:border-[#6D4AEB]"
             />
           </div>
         </div>
@@ -287,19 +287,19 @@ export default function TopologyMeshPage() {
       {/* Corridors Grid */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] flex items-center gap-2">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-slate-700   flex items-center gap-2">
             <Radio size={15} className="text-[#6D4AEB]" /> Active Corridors Mesh ({filteredCorridors.length})
           </h2>
-          <span className="text-xs text-slate-600 dark:text-slate-400">Click Sever Link to permanently decouple topology path</span>
+          <span className="text-xs text-slate-600 ">Click Sever Link to permanently decouple topology path</span>
         </div>
 
         {filteredCorridors.length === 0 ? (
           <div className="glass-card p-12 text-center space-y-3">
-            <Network className="mx-auto text-slate-600 dark:text-slate-400" size={40} />
-            <h3 className="font-display text-base font-bold text-[#1B1D2A] dark:text-white">
+            <Network className="mx-auto text-slate-600 " size={40} />
+            <h3 className="font-display text-base font-bold text-[#1B1D2A] ">
               No matching agent corridors found
             </h3>
-            <p className="text-xs text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] max-w-md mx-auto">
+            <p className="text-xs text-slate-700   max-w-md mx-auto">
               No corridors match your current filters. Provision a new corridor or reset search filters.
             </p>
             <button
@@ -322,16 +322,16 @@ export default function TopologyMeshPage() {
               return (
                 <div
                   key={c.id}
-                  className="glass-card p-5 space-y-4 hover:shadow-lg transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none group border border-white/90 dark:border-white/10"
+                  className="glass-card p-5 space-y-4 hover:shadow-lg transition focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:outline-none group border border-white/90 "
                 >
                   {/* Top Bar: Nodes & Protocol */}
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="px-2.5 py-1 rounded-md text-xs font-bold bg-[rgba(109,74,235,0.08)] dark:bg-indigo-500/20 text-[#6D4AEB] dark:text-indigo-300 border border-[rgba(109,74,235,0.2)]">
+                      <span className="px-2.5 py-1 rounded-md text-xs font-bold bg-[rgba(109,74,235,0.08)]  text-[#6D4AEB]  border border-[rgba(109,74,235,0.2)]">
                         {c.sourceAgent}
                       </span>
-                      <ArrowRight size={14} className="text-slate-600 dark:text-slate-400" />
-                      <span className="px-2.5 py-1 rounded-md text-xs font-bold bg-[rgba(14,156,116,0.08)] dark:bg-emerald-500/20 text-[#0E9C74] dark:text-emerald-300 border border-[rgba(14,156,116,0.2)]">
+                      <ArrowRight size={14} className="text-slate-600 " />
+                      <span className="px-2.5 py-1 rounded-md text-xs font-bold bg-[rgba(14,156,116,0.08)]  text-[#0E9C74]  border border-[rgba(14,156,116,0.2)]">
                         {c.targetAgent}
                       </span>
                     </div>
@@ -346,7 +346,7 @@ export default function TopologyMeshPage() {
                       >
                         {c.status}
                       </span>
-                      <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-[rgba(255,255,255,0.8)] dark:bg-white/5 border border-white/90 dark:border-white/10 text-slate-700 dark:text-slate-300">
+                      <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-[rgba(255,255,255,0.8)]  border border-white/90  text-slate-700 ">
                         {c.routeTier}
                       </span>
                     </div>
@@ -354,21 +354,21 @@ export default function TopologyMeshPage() {
 
                   {/* Description */}
                   {c.description && (
-                    <p className="text-xs text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3] line-clamp-2">
+                    <p className="text-xs text-slate-700   line-clamp-2">
                       {c.description}
                     </p>
                   )}
 
                   {/* Protocol & Latency Telemetry */}
-                  <div className="grid grid-cols-3 gap-2 p-2.5 rounded-xl bg-[rgba(255,255,255,0.5)] dark:bg-black/20 border border-white/90 dark:border-white/5 text-center">
+                  <div className="grid grid-cols-3 gap-2 p-2.5 rounded-xl bg-[rgba(255,255,255,0.5)]  border border-white/90  text-center">
                     <div>
-                      <span className="text-[10px] uppercase font-bold text-slate-600 dark:text-slate-400 block">Protocol</span>
-                      <span className="text-xs font-extrabold text-[#1B1D2A] dark:text-white">
+                      <span className="text-[10px] uppercase font-bold text-slate-600  block">Protocol</span>
+                      <span className="text-xs font-extrabold text-[#1B1D2A] ">
                         {c.protocol}
                       </span>
                     </div>
                     <div>
-                      <span className="text-[10px] uppercase font-bold text-slate-600 dark:text-slate-400 block">RTT Latency</span>
+                      <span className="text-[10px] uppercase font-bold text-slate-600  block">RTT Latency</span>
                       <span
                         className={`text-xs font-extrabold ${
                           isDegraded ? 'text-[#E11D48]' : 'text-[#0E9C74]'
@@ -378,8 +378,8 @@ export default function TopologyMeshPage() {
                       </span>
                     </div>
                     <div>
-                      <span className="text-[10px] uppercase font-bold text-slate-600 dark:text-slate-400 block">Throughput</span>
-                      <span className="text-xs font-extrabold text-[#6D4AEB] dark:text-indigo-300">
+                      <span className="text-[10px] uppercase font-bold text-slate-600  block">Throughput</span>
+                      <span className="text-xs font-extrabold text-[#6D4AEB] ">
                         {c.throughputTokPerSec} tok/s
                       </span>
                     </div>
@@ -388,12 +388,12 @@ export default function TopologyMeshPage() {
                   {/* SLA Progress Bar */}
                   <div className="space-y-1">
                     <div className="flex items-center justify-between text-[11px]">
-                      <span className="text-slate-600 dark:text-slate-400">SLA Budget Usage</span>
-                      <span className="font-semibold text-[#1B1D2A] dark:text-white">
+                      <span className="text-slate-600 ">SLA Budget Usage</span>
+                      <span className="font-semibold text-[#1B1D2A] ">
                         {c.latencyMs}ms / {c.slaTargetMs}ms ({latencyPercent}%)
                       </span>
                     </div>
-                    <div className="w-full h-1.5 rounded-full bg-black/5 dark:bg-white/10 overflow-hidden">
+                    <div className="w-full h-1.5 rounded-full bg-white/5  overflow-hidden">
                       <div
                         className={`h-full rounded-full transition-all ${
                           latencyPercent > 80
@@ -408,8 +408,8 @@ export default function TopologyMeshPage() {
                   </div>
 
                   {/* Footer & Actions */}
-                  <div className="pt-2 border-t border-[rgba(109,74,235,0.08)] dark:border-white/5 flex items-center justify-between">
-                    <span className="text-[10px] font-mono text-slate-600 dark:text-slate-400 truncate max-w-[200px]">
+                  <div className="pt-2 border-t border-[rgba(109,74,235,0.08)]  flex items-center justify-between">
+                    <span className="text-[10px] font-mono text-slate-600  truncate max-w-[200px]">
                       ID: {c.id}
                     </span>
                     <button
@@ -430,11 +430,11 @@ export default function TopologyMeshPage() {
 
       {/* Provision Corridor Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-          <div className="glass-card max-w-lg w-full p-4 sm:p-5 space-y-5 bg-white dark:bg-[#0F1424] border border-[rgba(109,74,235,0.3)] shadow-2xl relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-white/60 backdrop-blur-sm animate-fade-in">
+          <div className="glass-card max-w-lg w-full p-4 sm:p-5 space-y-5 bg-white  border border-[rgba(109,74,235,0.3)] shadow-2xl relative">
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute right-4 top-4 text-slate-600 dark:text-slate-400 hover:text-[#1B1D2A] dark:hover:text-white"
+              className="absolute right-4 top-4 text-slate-600  hover:text-[#1B1D2A] "
             >
               <X size={20} />
             </button>
@@ -444,10 +444,10 @@ export default function TopologyMeshPage() {
                 <Plus size={20} />
               </div>
               <div>
-                <h3 className="font-display text-lg font-bold text-[#1B1D2A] dark:text-white">
+                <h3 className="font-display text-lg font-bold text-[#1B1D2A] ">
                   Provision Agent Routing Corridor
                 </h3>
-                <p className="text-xs text-slate-700 dark:text-slate-300 dark:text-[#8B8FA3]">
+                <p className="text-xs text-slate-700  ">
                   Establish real-time inter-agent communication channel with QoS parameters
                 </p>
               </div>
@@ -456,11 +456,11 @@ export default function TopologyMeshPage() {
             <form onSubmit={handleCreate} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase">Source Agent</label>
+                  <label className="text-xs font-bold text-slate-700  uppercase">Source Agent</label>
                   <select
                     value={sourceAgent}
                     onChange={(e) => setSourceAgent(e.target.value)}
-                    className="w-full px-3 py-2 text-xs rounded-lg bg-[rgba(255,255,255,0.8)] dark:bg-[#151B2E] border border-white/90 dark:border-white/10 text-[#1B1D2A] dark:text-white outline-none focus:border-[#6D4AEB]"
+                    className="w-full px-3 py-2 text-xs rounded-lg bg-[rgba(255,255,255,0.8)]  border border-white/90  text-[#1B1D2A]  outline-none focus:border-[#6D4AEB]"
                   >
                     {AVAILABLE_AGENTS.map((agent) => (
                       <option key={agent} value={agent}>
@@ -471,11 +471,11 @@ export default function TopologyMeshPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase">Target Agent</label>
+                  <label className="text-xs font-bold text-slate-700  uppercase">Target Agent</label>
                   <select
                     value={targetAgent}
                     onChange={(e) => setTargetAgent(e.target.value)}
-                    className="w-full px-3 py-2 text-xs rounded-lg bg-[rgba(255,255,255,0.8)] dark:bg-[#151B2E] border border-white/90 dark:border-white/10 text-[#1B1D2A] dark:text-white outline-none focus:border-[#6D4AEB]"
+                    className="w-full px-3 py-2 text-xs rounded-lg bg-[rgba(255,255,255,0.8)]  border border-white/90  text-[#1B1D2A]  outline-none focus:border-[#6D4AEB]"
                   >
                     {AVAILABLE_AGENTS.filter((a) => a !== sourceAgent).map((agent) => (
                       <option key={agent} value={agent}>
@@ -488,11 +488,11 @@ export default function TopologyMeshPage() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase">Channel Protocol</label>
+                  <label className="text-xs font-bold text-slate-700  uppercase">Channel Protocol</label>
                   <select
                     value={protocol}
                     onChange={(e: any) => setProtocol(e.target.value)}
-                    className="w-full px-3 py-2 text-xs rounded-lg bg-[rgba(255,255,255,0.8)] dark:bg-[#151B2E] border border-white/90 dark:border-white/10 text-[#1B1D2A] dark:text-white outline-none focus:border-[#6D4AEB]"
+                    className="w-full px-3 py-2 text-xs rounded-lg bg-[rgba(255,255,255,0.8)]  border border-white/90  text-[#1B1D2A]  outline-none focus:border-[#6D4AEB]"
                   >
                     <option value="gRPC">gRPC (Low Latency Binary)</option>
                     <option value="Neural Stream">Neural Stream (WebSocket)</option>
@@ -502,11 +502,11 @@ export default function TopologyMeshPage() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase">Routing Tier</label>
+                  <label className="text-xs font-bold text-slate-700  uppercase">Routing Tier</label>
                   <select
                     value={routeTier}
                     onChange={(e: any) => setRouteTier(e.target.value)}
-                    className="w-full px-3 py-2 text-xs rounded-lg bg-[rgba(255,255,255,0.8)] dark:bg-[#151B2E] border border-white/90 dark:border-white/10 text-[#1B1D2A] dark:text-white outline-none focus:border-[#6D4AEB]"
+                    className="w-full px-3 py-2 text-xs rounded-lg bg-[rgba(255,255,255,0.8)]  border border-white/90  text-[#1B1D2A]  outline-none focus:border-[#6D4AEB]"
                   >
                     <option value="Enterprise">Enterprise Priority</option>
                     <option value="Pro">Pro Business</option>
@@ -518,48 +518,48 @@ export default function TopologyMeshPage() {
 
               <div className="grid grid-cols-3 gap-3">
                 <div className="space-y-1">
-                  <label className="text-[11px] font-bold text-slate-700 dark:text-slate-300">RTT Latency (ms)</label>
+                  <label className="text-[11px] font-bold text-slate-700 ">RTT Latency (ms)</label>
                   <input
                     type="number"
                     value={latencyMs}
                     onChange={(e) => setLatencyMs(Number(e.target.value))}
                     min={1}
                     max={500}
-                    className="w-full px-3 py-1.5 text-xs rounded-lg bg-[rgba(255,255,255,0.8)] dark:bg-[#151B2E] border border-white/90 dark:border-white/10 text-[#1B1D2A] dark:text-white outline-none focus:border-[#6D4AEB]"
+                    className="w-full px-3 py-1.5 text-xs rounded-lg bg-[rgba(255,255,255,0.8)]  border border-white/90  text-[#1B1D2A]  outline-none focus:border-[#6D4AEB]"
                   />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-[11px] font-bold text-slate-700 dark:text-slate-300">SLA Target (ms)</label>
+                  <label className="text-[11px] font-bold text-slate-700 ">SLA Target (ms)</label>
                   <input
                     type="number"
                     value={slaTargetMs}
                     onChange={(e) => setSlaTargetMs(Number(e.target.value))}
                     min={5}
                     max={1000}
-                    className="w-full px-3 py-1.5 text-xs rounded-lg bg-[rgba(255,255,255,0.8)] dark:bg-[#151B2E] border border-white/90 dark:border-white/10 text-[#1B1D2A] dark:text-white outline-none focus:border-[#6D4AEB]"
+                    className="w-full px-3 py-1.5 text-xs rounded-lg bg-[rgba(255,255,255,0.8)]  border border-white/90  text-[#1B1D2A]  outline-none focus:border-[#6D4AEB]"
                   />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-[11px] font-bold text-slate-700 dark:text-slate-300">Throughput (tok/s)</label>
+                  <label className="text-[11px] font-bold text-slate-700 ">Throughput (tok/s)</label>
                   <input
                     type="number"
                     value={throughputTokPerSec}
                     onChange={(e) => setThroughputTokPerSec(Number(e.target.value))}
                     min={100}
                     max={20000}
-                    className="w-full px-3 py-1.5 text-xs rounded-lg bg-[rgba(255,255,255,0.8)] dark:bg-[#151B2E] border border-white/90 dark:border-white/10 text-[#1B1D2A] dark:text-white outline-none focus:border-[#6D4AEB]"
+                    className="w-full px-3 py-1.5 text-xs rounded-lg bg-[rgba(255,255,255,0.8)]  border border-white/90  text-[#1B1D2A]  outline-none focus:border-[#6D4AEB]"
                   />
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase">Corridor Description</label>
+                <label className="text-xs font-bold text-slate-700  uppercase">Corridor Description</label>
                 <input
                   type="text"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   placeholder="e.g. Dedicated high-urgency fallback pipeline for Stripe billing queries"
-                  className="w-full px-3 py-2 text-xs rounded-lg bg-[rgba(255,255,255,0.8)] dark:bg-[#151B2E] border border-white/90 dark:border-white/10 text-[#1B1D2A] dark:text-white placeholder-[#9599AD] outline-none focus:border-[#6D4AEB]"
+                  className="w-full px-3 py-2 text-xs rounded-lg bg-[rgba(255,255,255,0.8)]  border border-white/90  text-[#1B1D2A]  placeholder-[#9599AD] outline-none focus:border-[#6D4AEB]"
                 />
               </div>
 
@@ -567,7 +567,7 @@ export default function TopologyMeshPage() {
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-2 text-xs font-semibold rounded-lg bg-[rgba(255,255,255,0.7)] dark:bg-white/5 text-slate-700 dark:text-slate-300 hover:text-[#1B1D2A] border border-white/90 dark:border-white/10"
+                  className="px-4 py-2 text-xs font-semibold rounded-lg bg-[rgba(255,255,255,0.7)]  text-slate-700  hover:text-[#1B1D2A] border border-white/90 "
                 >
                   Cancel
                 </button>

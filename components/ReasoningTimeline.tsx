@@ -8,13 +8,13 @@ import { Terminal, Cpu, Zap } from 'lucide-react';
 import { playStepSound } from '@/lib/audio/soundEffects';
 
 const AGENT_CONFIG: Record<string, { color: string; bg: string; border: string }> = {
-  Router: { color: 'text-[#6D4AEB] dark:text-indigo-300', bg: 'bg-[rgba(109,74,235,0.06)] dark:bg-indigo-500/10', border: 'border-[rgba(109,74,235,0.2)] dark:border-indigo-500/30' },
-  Billing: { color: 'text-[#C97A00] dark:text-amber-300', bg: 'bg-[rgba(201,122,0,0.06)] dark:bg-amber-500/10', border: 'border-[rgba(201,122,0,0.2)] dark:border-amber-500/30' },
-  Technical: { color: 'text-fuchsia-600 dark:text-fuchsia-300', bg: 'bg-fuchsia-500/[0.06] dark:bg-fuchsia-500/10', border: 'border-fuchsia-500/20 dark:border-fuchsia-500/30' },
-  Order: { color: 'text-[#0E9C74] dark:text-emerald-300', bg: 'bg-[rgba(14,156,116,0.06)] dark:bg-emerald-500/10', border: 'border-[rgba(14,156,116,0.2)] dark:border-emerald-500/30' },
-  Account: { color: 'text-indigo-600 dark:text-indigo-300', bg: 'bg-indigo-500/[0.06] dark:bg-indigo-500/10', border: 'border-indigo-500/20 dark:border-indigo-500/30' },
-  Reasoning: { color: 'text-blue-600 dark:text-blue-300', bg: 'bg-blue-500/[0.06] dark:bg-blue-500/10', border: 'border-blue-500/20 dark:border-blue-500/30' },
-  Escalation: { color: 'text-[#E11D48] dark:text-rose-300', bg: 'bg-[rgba(225,29,72,0.06)] dark:bg-rose-500/10', border: 'border-[rgba(225,29,72,0.2)] dark:border-rose-500/30' },
+  Router: { color: 'text-[#6D4AEB] ', bg: 'bg-[rgba(109,74,235,0.06)] ', border: 'border-[rgba(109,74,235,0.2)] ' },
+  Billing: { color: 'text-[#C97A00] ', bg: 'bg-[rgba(201,122,0,0.06)] ', border: 'border-[rgba(201,122,0,0.2)] ' },
+  Technical: { color: 'text-fuchsia-600 ', bg: 'bg-fuchsia-500/[0.06] ', border: 'border-fuchsia-500/20 ' },
+  Order: { color: 'text-[#0E9C74] ', bg: 'bg-[rgba(14,156,116,0.06)] ', border: 'border-[rgba(14,156,116,0.2)] ' },
+  Account: { color: 'text-indigo-600 ', bg: 'bg-indigo-500/[0.06] ', border: 'border-indigo-500/20 ' },
+  Reasoning: { color: 'text-blue-600 ', bg: 'bg-blue-500/[0.06] ', border: 'border-blue-500/20 ' },
+  Escalation: { color: 'text-[#E11D48] ', bg: 'bg-[rgba(225,29,72,0.06)] ', border: 'border-[rgba(225,29,72,0.2)] ' },
 };
 
 export default function ReasoningTimeline({
@@ -51,18 +51,18 @@ export default function ReasoningTimeline({
 
   return (
     <div className="space-y-2.5">
-      <div className="flex items-center justify-between text-xs text-slate-700 dark:text-slate-300 dark:text-gray-400 border-b border-[rgba(109,74,235,0.08)] dark:border-white/5 pb-2">
+      <div className="flex items-center justify-between text-xs text-slate-700   border-b border-[rgba(109,74,235,0.08)]  pb-2">
         <div className="flex items-center gap-2 font-mono">
-          <Terminal size={14} className="text-[#6D4AEB] dark:text-indigo-400" />
+          <Terminal size={14} className="text-[#6D4AEB] " />
           <span>Chain-of-Thought Stream</span>
         </div>
-        <div className="flex items-center gap-3 text-[11px] font-mono text-slate-700 dark:text-slate-300 dark:text-gray-400">
-          <span className="flex items-center gap-1 text-[#6D4AEB] dark:text-indigo-300">
+        <div className="flex items-center gap-3 text-[11px] font-mono text-slate-700  ">
+          <span className="flex items-center gap-1 text-[#6D4AEB] ">
             <Zap size={12} /> 85 tok/s
           </span>
-          <span className="text-slate-700 dark:text-slate-300 dark:text-gray-600">|</span>
+          <span className="text-slate-700  ">|</span>
           <span className="flex items-center gap-1">
-            <Cpu size={12} className="text-[#6D4AEB] dark:text-indigo-400" /> Qwen-Plus
+            <Cpu size={12} className="text-[#6D4AEB] " /> Qwen-Plus
           </span>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default function ReasoningTimeline({
         <AnimatePresence>
           {steps.slice(0, visible).map((s, idx) => {
             const isLast = idx === visible - 1;
-            const conf = AGENT_CONFIG[s.agent] || { color: 'text-gray-600 dark:text-gray-300', bg: 'bg-black/5 dark:bg-white/5', border: 'border-black/10 dark:border-white/10' };
+            const conf = AGENT_CONFIG[s.agent] || { color: 'text-gray-600 ', bg: 'bg-white/5 ', border: 'border-black/10 ' };
             const timestampOffset = `+${(idx * 0.22).toFixed(2)}s`;
 
             return (
@@ -83,14 +83,14 @@ export default function ReasoningTimeline({
                 transition={{ type: 'spring', stiffness: 300, damping: 25 }}
                 className={`flex gap-3 items-start p-2.5 rounded-xl border transition-all duration-300 ${
                   isLast
-                    ? 'border-[rgba(109,74,235,0.3)] dark:border-indigo-400/40 bg-[rgba(109,74,235,0.04)] dark:bg-gradient-to-r dark:from-indigo-500/10 dark:to-transparent shadow-sm'
-                    : 'border-white/90 dark:border-white/5 bg-[rgba(255,255,255,0.5)] dark:bg-black/20'
+                    ? 'border-[rgba(109,74,235,0.3)]  bg-[rgba(109,74,235,0.04)]    shadow-sm'
+                    : 'border-white/90  bg-[rgba(255,255,255,0.5)] '
                 }`}
               >
                 <div className="flex flex-col items-center shrink-0 pt-0.5">
                   <span
                     className={`h-2 w-2 rounded-full ${
-                      isLast ? 'bg-[#6D4AEB] dark:bg-indigo-400 animate-pulse' : 'bg-[#0E9C74] dark:bg-emerald-400/80'
+                      isLast ? 'bg-[#6D4AEB]  animate-pulse' : 'bg-[#0E9C74] '
                     }`}
                   />
                   <span className="text-[10px] text-gray-500 mt-1 font-mono">{timestampOffset}</span>
@@ -104,7 +104,7 @@ export default function ReasoningTimeline({
                       {s.agent}
                     </span>
                   </div>
-                  <p className="text-[#1B1D2A] dark:text-gray-200 leading-relaxed break-words">{s.text}</p>
+                  <p className="text-[#1B1D2A]  leading-relaxed break-words">{s.text}</p>
                 </div>
               </motion.div>
             );
